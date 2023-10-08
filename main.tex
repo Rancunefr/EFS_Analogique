@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{graphicx}
+\usepackage[colorlinks]{hyperref}
+\usepackage{imakeidx}
+\usepackage{lipsum} 
+\usepackage{a4wide}
+\usepackage[inkscapeformat=png]{svg}
+
+\makeatletter
+\providecommand*{\input@path}{}
+\edef\input@path{{chapitres/}\input@path}% prepend
+\makeatother
+
+
+
+\title{Electronique Analogique}
+\author{Rancune \& Le chat}
+\date{\today}
+
+\makeindex
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+
+\tableofcontents    
+
+\input{introduction.tex}
+
+\mainmatter
+
+\part{ Les lois de base }
+
+\input{ grandeurs_electriques.tex }
+%\input{ lois_électriques.tex }
+%\input{ résistance.tex }
+%\input{ capacité.tex }
+%\input{ inductance.tex }
+
+\part{ Les composants passifs }
+
+%\input{ resistor.tex }
+%\input{ condensateur.tex }
+%\input{ bobine.tex}
+
+\part{ Les semi-conducteurs }
+
+%\input{ diode.tex }
+%\input{ bjt.tex }
+%\input{ fet.tex }
+
+\part{ Analyse harmonique }
+
+% Les annexes
+
+\appendix
+
+\backmatter
+
+\printindex
+
+% Fin du document
+\end{document}
+
+
+
