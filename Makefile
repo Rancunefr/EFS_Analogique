@@ -4,7 +4,7 @@ INDEX= makeindex
 
 all: main.pdf
 
-main.pdf: main.tex
+main.pdf: main.tex 
 	$(TEX) main
 	$(INDEX) main
 	$(TEX) main
