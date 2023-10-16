@@ -4,7 +4,7 @@ INDEX= makeindex
 
 all: main.pdf
 
-main.pdf: main.tex 
+main.pdf: main.tex FORCE
 	$(TEX) main
 	$(INDEX) main
 	$(TEX) main
@@ -27,3 +27,7 @@ clean:
 	$(RM) *.out
 	$(RM) *.idx
 	$(RM) *.ind
+
+
+FORCE:	
+.PHONY: clean
