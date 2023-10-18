@@ -1,15 +1,40 @@
 \chapter{Les grandeurs électriques}
 
-\section{Le Potentiel}
+\section{La charge électrique}
+
+Tout comme la masse pour les interactions gravitationnelles, la \textbf{charge} est une propriété fondamentale de la matière qui lui permet d'intéragir par le biais de champs électromagnétiques. \\
+
+\begin{tabular}{ll}
+\textbf{Notation usuelle~:} & $Q$, $q$ \\
+	\textbf{Unité~:} & Coulomb (C) \\
+\textbf{Unité SI~:} & $A \cdot s $ \\
+\textbf{Nature~:} & Grandeur scalaire \\
+\end{tabular} \\
+
+Il existe deux types de charges électriques : les charges positives ($+$) et les charges négatives ($-$). Deux charges de même signe se repoussent, deux charges de signes différents s'attirent.
+
+\subsection*{ Quantification de la charge~: }
+
+La charge électrique est quantifiée, elle est un multiple entier de la charge élémentaire $e$, qui correspond à la charge d'un électron. 
+
+$$e \approx 1,602.10^{-19} C$$
+
+Néanmoins, on la considère en général en électronique comme une grandeur continue. Ceci a pour conséquence d'introduire dans les calculs un bruit particulier, appelé "bruit de grenaille". 
+
+\subsection*{ Conservation de la charge~: }
+
+La charge électrique est une grandeur conservative : la charge d'un système isolé est invariante. La charge electrique ne peut donc être qu'échangée avec un autre système, mais ni créée, ni annihilée.
+
+\section{Le potentiel}
 
 En tout point de l'espace est défini un \textbf{potentiel}. Cette valeur scalaire correspond à l'énergie potentielle électrostatique que posséderait une charge électrique unitaire située en ce point. \\
 
 \begin{tabular}{ll}
 \textbf{Notation usuelle~:} & V \\
-\textbf{Unité~:} & Volt \\
+	\textbf{Unité~:} & Volt (V)\\
 \textbf{Unité SI~:} & ${kg} \cdot m^2 \cdot {s}^{-3} \cdot A^{-1}$ \\
-\textbf{Nature~:} & Grandeur scalaire \\
-\end{tabular}
+\textbf{Nature~:} & Grandeur scalaire 
+\end{tabular}\\
 
 \section{La tension}
 
@@ -17,21 +42,68 @@ Une \textbf{tension} est la circulation du champs électrique le long d'un circ
 
 \begin{tabular}{ll}
 \textbf{Notation usuelle~:} & $U$, $U_{AB}$ \\
-\textbf{Unité~:} & Volt \\
+	\textbf{Unité~:} & Volt (V) \\
 \textbf{Unité SI~:} & ${kg} \cdot m^2 \cdot {s}^{-3} \cdot A^{-1}$ \\
 \textbf{Nature~:} & Grandeur scalaire \\
 \end{tabular} \\
 
-En électronique, une tension se mesure toujours \emph{entre deux points}, généralement à l'aide d'un multimètre ou d'un oscilloscope. \\
+En électronique, une tension se mesure toujours \emph{entre deux points}, généralement à l'aide d'un voltmètre ou d'un oscilloscope. 
 
-\textbf{ Représentation graphique: } \\
+\subsection*{Représentation graphique: }
 
-\includesvg{figures/tension}
-
-test
+\begin{minipage}{7cm}
+	\includesvg{figures/tension} 
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{7cm}
+	Une tension est représentée par une flêche. Son sens est important car une tension est une \underline{grandeur signée}. 
+\end{minipage}\\
 
 \section{Le courant}
 
-\section{La puissance}
+Un courant est un mouvement d'ensemble de porteurs de charges électriques au sein d'un matériau conducteur. \\
 
-\section{L'Energie electrique}
+\begin{tabular}{ll}
+\textbf{Notation usuelle~:} & $I$ \\
+	\textbf{Unité~:} & Ampère (A) \\
+\textbf{Unité SI~:} & $A$ \\
+\textbf{Nature~:} & Grandeur scalaire \\
+\end{tabular} \\
+
+Ces porteurs de charge sont dans le cas le plus courant des électrons, mais celà peut également être des ions positifs ou négatifs (Par exemple dans le cas des electrolytes) ou encore n'importe quelle type de corps portant une charge non nulle. \\
+
+En pratique, un courant se mesure généralement à l'aide d'un ampèremètre. 
+\subsection*{ Représentation graphique: }
+
+\begin{minipage}{7cm}
+	\includesvg{figures/courant} 
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{7cm}
+	Le courant électrique est généralement représenté par une flêche située sur le circuit. Son sens est important car un courant est une \underline{grandeur signée}. 
+\end{minipage}\\
+
+
+\subsection*{ Sens conventionnel du courant: }
+
+Par convention, le courant sort du générateur électrique par la borne positive et y revient par la borne négative. C'est ce que l'on appelle le sens conventionnel du courant. \\
+
+On ne raisonne jamais en electronique en utilisant le sens réel des porteurs de charges, car celui-ci sera différent s'il s'agit d'electrons ( qui circulent du pole négatif vers le pole positif du générateur) ou de cations ( qui circulent en sens inverse). Cela n'a aucune importance et ne ferait que complexifier inutilement les raisonnements. Dans la suite de ce document, et plus largement dans l'intégralité des ouvrages lus par votre serviteur, c'est toujours le sens conventionnel qui est utilisé.
+
+\subsection*{Intensité du courant}
+
+L'intensité du courant électrique (parfois appelée "ampérage" ou "courant") correspond au débit de charges électriques à travers une surface donnée (le plus souvent la section d'un fil électrique) : \\
+
+
+	$$ i(t) = \dfrac{dq(t)}{dt} $$
+
+avec~: \\
+\begin{itemize}
+	\item[$\bullet$] $i$ : l'intensité du courant
+	\item[$\bullet$] $q$ : la charge électrique
+	\item[$\bullet$] $t$ : le temps.
+\end{itemize}
+
+%\section{La puissance}
+
+%\section{L'Energie electrique}
