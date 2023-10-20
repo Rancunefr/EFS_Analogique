@@ -27,6 +27,7 @@ clean:
 	$(RM) *.out
 	$(RM) *.idx
 	$(RM) *.ind
+	$(RM) -fr svg-inkscape
 
 
 FORCE:	
