@@ -1,0 +1,6 @@
+
+\newcommand*{\keywordunstar}[1]{\textbf{#1}\index{#1}}
+\newcommand*{\keywordstar}[1]{ #1 \index{#1}}
+\makeatletter
+\newcommand{\keyword}{\@ifstar{\keywordstar}{\keywordunstar}}
+\makeatother

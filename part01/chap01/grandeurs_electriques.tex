@@ -2,7 +2,7 @@
 
 \section{La charge électrique}
 
-Tout comme la masse pour les interactions gravitationnelles, la \textbf{charge} est une propriété fondamentale de la matière qui lui permet d'intéragir par le biais de champs électromagnétiques. \\
+Tout comme la masse pour les interactions gravitationnelles, la \keyword{charge électrique} est une propriété fondamentale de la matière qui lui permet d'intéragir par le biais de champs électromagnétiques. \\
 
 \begin{tabular}{ll}
 \textbf{Notation usuelle~:} & $Q$, $q$ \\
@@ -15,11 +15,11 @@ Il existe deux types de charges électriques : les charges positives ($+$) et le
 
 \subsection*{ Quantification de la charge~: }
 
-La charge électrique est quantifiée, elle est un multiple entier de la charge élémentaire $e$, qui correspond à la charge d'un électron. 
+La charge électrique est quantifiée, elle est un multiple entier de la \keyword*{charge élémentaire} $e$, qui correspond à la charge d'un \keyword*{électron}. 
 
 $$e \approx 1,602.10^{-19} C$$
 
-Néanmoins, on la considère en général en électronique comme une grandeur continue. Ceci a pour conséquence d'introduire dans les calculs un bruit particulier, appelé "bruit de grenaille". 
+Néanmoins, on la considère en général en électronique comme une grandeur continue. Ceci a pour conséquence d'introduire dans les calculs un bruit particulier, appelé "\keyword*{bruit de grenaille}". 
 
 \subsection*{ Conservation de la charge~: }
 
@@ -27,7 +27,7 @@ La charge électrique est une grandeur conservative : la charge d'un système is
 
 \section{Le potentiel}
 
-En tout point de l'espace est défini un \textbf{potentiel}. Cette valeur scalaire correspond à l'énergie potentielle électrostatique que posséderait une charge électrique unitaire située en ce point. \\
+En tout point de l'espace est défini un \keyword{potentiel}. Cette valeur scalaire correspond à l'énergie potentielle électrostatique que posséderait une charge électrique unitaire située en ce point. \\
 
 \begin{tabular}{ll}
 \textbf{Notation usuelle~:} & V \\
@@ -38,7 +38,7 @@ En tout point de l'espace est défini un \textbf{potentiel}. Cette valeur scalai
 
 \section{La tension}
 
-Une \textbf{tension} est la circulation du champs électrique le long d'un circuit. Dans le cas du régime stationnaire, cette notion se confond avec celle de \textbf{"différence de potentiel"} entre les deux extrémités du circuit. \\
+Une \keyword{tension} est la circulation du champs électrique le long d'un circuit. Dans le cas du régime stationnaire, cette notion se confond avec celle de "\keyword{différence de potentiel}" entre les deux extrémités du circuit. \\
 
 \begin{tabular}{ll}
 \textbf{Notation usuelle~:} & $U$, $U_{AB}$ \\
@@ -61,7 +61,7 @@ En électronique, une tension se mesure toujours \emph{entre deux points}, gén�
 
 \section{Le courant}
 
-Un courant est un mouvement d'ensemble de porteurs de charges électriques au sein d'un matériau conducteur. \\
+Un \keyword{courant} est un mouvement d'ensemble de porteurs de charges électriques au sein d'un matériau conducteur. \\
 
 \begin{tabular}{ll}
 \textbf{Notation usuelle~:} & $I$ \\
@@ -86,16 +86,17 @@ En pratique, un courant se mesure généralement à l'aide d'un ampèremètre.
 
 \subsection*{ Sens conventionnel du courant: }
 
-Par convention, le courant sort du générateur électrique par la borne positive et y revient par la borne négative. C'est ce que l'on appelle le sens conventionnel du courant. \\
+Par convention, le courant sort du générateur électrique par la borne positive et y revient par la borne négative. C'est ce que l'on appelle le \keyword{sens conventionnel du courant}. \\
 
 On ne raisonne jamais en electronique en utilisant le sens réel des porteurs de charges, car celui-ci sera différent s'il s'agit d'electrons ( qui circulent du pole négatif vers le pole positif du générateur) ou de cations ( qui circulent en sens inverse). Cela n'a aucune importance et ne ferait que complexifier inutilement les raisonnements. Dans la suite de ce document, et plus largement dans l'intégralité des ouvrages lus par votre serviteur, c'est toujours le sens conventionnel qui est utilisé.
 
 \subsection*{Intensité du courant}
 
-L'intensité du courant électrique (parfois appelée "ampérage" ou "courant") correspond au débit de charges électriques à travers une surface donnée (le plus souvent la section d'un fil électrique) : \\
+L'\keyword{intensité} du courant électrique (parfois appelée "\keyword*{ampérage}" ou "\keyword*{courant}") correspond au débit de charges électriques à travers une surface donnée (le plus souvent la section d'un fil électrique) : \\
 
-
-	$$ i(t) = \dfrac{dq(t)}{dt} $$
+\begin{equation}
+	i(t) = \dfrac{dq(t)}{dt} 
+\end{equation}
 
 avec~: \\
 \begin{itemize}
