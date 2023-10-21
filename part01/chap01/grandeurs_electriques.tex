@@ -115,10 +115,18 @@ avec~: \\
 
 \section{L'Energie électrique}
 
+
 \textbf{Parler d'énergie électrique est au sens strict un abus de langage}. Ce n'est pas une véritable forme d'énergie comme peuvent l'être l'énergie cinétique ou l'énergie potentielle. Il s'agit plutôt d'un vecteur énergétique, c'est à dire un moyen de transférer de l'energie entre deux systèmes : l'électricité requiert et transporte de l'énergie. \\
 \index{energie@énergie}
 
-Ceci étant précisé, on la définit en général de la façon suivante~:
+\begin{tabular}{ll}
+\textbf{Notation usuelle~:} & $E$ \\
+\textbf{Unité~:} & Joule (J) \\
+	\textbf{Unité SI~:} & $kg \cdot m^2 \cdot s^{-2}$ \\
+\textbf{Nature~:} & Grandeur scalaire \\
+\end{tabular} \\
+
+L'énergie électrique est définie de la façon suivante~:
 
 \begin{equation}
 	E = q \cdot U
@@ -131,21 +139,55 @@ avec~:
 	\item[$\bullet$] $U$ la tension électrique en volts \\
 \end{itemize}
 
+\subsection{Autre unité de mesure}
+
+Le joule étant une unité de mesure assez petite pour les besoins des électriciens, une autre unité est souvent utilisée~: le kiloWattheure (kWh). \\
+\index{kiloWattheure}
+
+$ 1\:kWh = 10^3 \cdot 3600\:J = 3.6\:MJ $
+
+
+\subsection{Lien avec la puissance}
+
 si $I$ est le courant, on a $q = I \cdot \Delta t$, et donc :
 
+$$ E = q \cdot U = I \cdot \Delta t \cdot U = U \cdot I \cdot \Delta t $$
+
+Et donc~: \\
 \begin{equation}
-	E = q \cdot U \\
-	  = I \cdot \Delta t \cdot U \\
-	  = U \cdot I \cdot \Delta t \\
-	  = P \cdot \Delta t \\
+E = P \cdot \Delta t 
 \end{equation}
 
 avec $P$ la puissance électrique.\\
-\index{puissance}
 
-\section{La puissance}
+\section{La puissance électrique}
 
-La puissance\index{puissance!puissance electrique@puissance électrique} est un taux d'énergie transférée par unité de temps.
+\begin{tabular}{ll}
+\textbf{Notation usuelle~:} & $P$ \\
+\textbf{Unité~:} & Watt (W) \\
+	\textbf{Unité SI~:} & $kg \cdot m^2 \cdot s{-3}$ \\
+\textbf{Nature~:} & Grandeur scalaire \\
+\end{tabular} \\
 
+La puissance\index{puissance!puissance electrique@puissance électrique} est un taux d'énergie transférée par un circuit électrique par unité de temps. La puissance est donc reliée à l'énergie par la relation~:
 
+\begin{equation}
+	P = \dfrac{E}{t}
+\end{equation}
+
+Ce qui nous permet également de l'exprimer en fonction de la tension et du courant :
+
+\begin{equation}
+	P = U \cdot I
+\end{equation}
+
+Dans un générateur, cette quantité est de signe négatif (le générateur fournit de l'énergie). Dans une charge, cette quantité est de signe positif.
+
+\subsection{Expression par les champs électromagnétiques}
+
+Lorsque des champs électriques et magnétiques coexistent et fluctuent, de l'énergie électrique s'écoule. On définit alors la puissance par la somme sur une surface fermée du produit vectoriel entre champs électrique ($E$) et champs magnétique ($H$). La puissance est alors définie par~:
+
+\begin{equation}
+P = \oint_{aire}(E \times H) d{A}
+\end{equation}
 
