@@ -4,4 +4,9 @@
 *.lot
 *.pdf
 *.toc
+*.idx
+*.ilg
+*.ind
+*.out
+
 svg-inkscape/
