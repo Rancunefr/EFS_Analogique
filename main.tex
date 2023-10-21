@@ -6,14 +6,13 @@
 \usepackage[francais]{babel}
 \usepackage{graphicx}
 \usepackage[colorlinks]{hyperref}
-\usepackage{imakeidx}
+\usepackage{makeidx}
 \usepackage{lipsum} 
 \usepackage{a4wide}
 \usepackage{svg}
 
 \makeatletter
 
-\indexsetup{level=\section*,toclevel=section,noclearpage}
 \input{tools.tex}
 
 \title{Les notes de Rancune: \\Electronique Analogique}
@@ -42,7 +41,7 @@
 %\input{ capacité.tex }
 %\input{ inductance.tex }
 
-%\part{ Les composants passifs }
+%\part{ Les composants Linéaires }
 
 %\input{ resistor.tex }
 %\input{ condensateur.tex }
@@ -60,10 +59,10 @@
 
 %\appendix
 
-\backmatter
+%\backmatter
 
-\chapter*{Index}
 \printindex
+\addcontentsline{toc}{part}{Index}
 
 % Fin du document
 \end{document}

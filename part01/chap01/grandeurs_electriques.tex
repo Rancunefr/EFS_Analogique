@@ -2,7 +2,8 @@
 
 \section{La charge électrique}
 
-Tout comme la masse pour les interactions gravitationnelles, la \keyword{charge électrique} est une propriété fondamentale de la matière qui lui permet d'intéragir par le biais de champs électromagnétiques. \\
+Tout comme la masse pour les interactions gravitationnelles, la \textbf{charge électrique} est une propriété fondamentale de la matière qui lui permet d'intéragir par le biais de champs électromagnétiques. \\
+\index{charge!charge electrique@charge électrique}
 
 \begin{tabular}{ll}
 \textbf{Notation usuelle~:} & $Q$, $q$ \\
@@ -15,11 +16,15 @@ Il existe deux types de charges électriques : les charges positives ($+$) et le
 
 \subsection*{ Quantification de la charge~: }
 
-La charge électrique est quantifiée, elle est un multiple entier de la \keyword*{charge élémentaire} $e$, qui correspond à la charge d'un \keyword*{électron}. 
+La charge électrique est quantifiée, elle est un multiple entier de la \textbf{charge élémentaire} $e$, qui correspond à la charge d'un électron.
+\index{electron@électron}
+\index{charge!charge elementaire@charge élémentaire}
 
-$$e \approx 1,602.10^{-19} C$$
+\begin{equation}
+	e \approx 1,602.10^{-19} C
+\end{equation}
 
-Néanmoins, on la considère en général en électronique comme une grandeur continue. Ceci a pour conséquence d'introduire dans les calculs un bruit particulier, appelé "\keyword*{bruit de grenaille}". 
+Néanmoins, on la considère en général en électronique comme une grandeur continue. Ceci a pour conséquence d'introduire dans les calculs un bruit particulier, appelé "bruit de grenaille".\index{bruit!bruit de grenaille}\index{grenaille!bruit de grenaille}
 
 \subsection*{ Conservation de la charge~: }
 
@@ -38,7 +43,8 @@ En tout point de l'espace est défini un \keyword{potentiel}. Cette valeur scala
 
 \section{La tension}
 
-Une \keyword{tension} est la circulation du champs électrique le long d'un circuit. Dans le cas du régime stationnaire, cette notion se confond avec celle de "\keyword{différence de potentiel}" entre les deux extrémités du circuit. \\
+Une \keyword{tension} est la circulation du champs électrique le long d'un circuit. Dans le cas du régime stationnaire, cette notion se confond avec celle de "\textbf{différence de potentiel}" entre les deux extrémités du circuit. \\
+\index{potentiel!difference de potentiel@différence de potentiel}
 
 \begin{tabular}{ll}
 \textbf{Notation usuelle~:} & $U$, $U_{AB}$ \\
@@ -61,7 +67,7 @@ En électronique, une tension se mesure toujours \emph{entre deux points}, gén�
 
 \section{Le courant}
 
-Un \keyword{courant} est un mouvement d'ensemble de porteurs de charges électriques au sein d'un matériau conducteur. \\
+Un \textbf{courant}\index{courant!courant électrique} est un mouvement d'ensemble de porteurs de charges électriques au sein d'un matériau conducteur. \\
 
 \begin{tabular}{ll}
 \textbf{Notation usuelle~:} & $I$ \\
@@ -86,9 +92,11 @@ En pratique, un courant se mesure généralement à l'aide d'un ampèremètre.
 
 \subsection*{ Sens conventionnel du courant: }
 
-Par convention, le courant sort du générateur électrique par la borne positive et y revient par la borne négative. C'est ce que l'on appelle le \keyword{sens conventionnel du courant}. \\
+Par convention, le courant sort du générateur électrique par la borne positive et y revient par la borne négative. C'est ce que l'on appelle le \textbf{sens conventionnel du courant}. \\
+\index{courant!sens conventionnel du courant}
+\index{conventionnel!sens conventionnel du courant}
 
-On ne raisonne jamais en electronique en utilisant le sens réel des porteurs de charges, car celui-ci sera différent s'il s'agit d'electrons ( qui circulent du pole négatif vers le pole positif du générateur) ou de cations ( qui circulent en sens inverse). Cela n'a aucune importance et ne ferait que complexifier inutilement les raisonnements. Dans la suite de ce document, et plus largement dans l'intégralité des ouvrages lus par votre serviteur, c'est toujours le sens conventionnel qui est utilisé.
+On ne raisonne jamais en électronique en utilisant le sens réel des porteurs de charges, car celui-ci sera différent s'il s'agit d'electrons ( qui circulent du pole négatif vers le pole positif du générateur) ou de cations ( qui circulent en sens inverse). Cela n'a aucune importance et ne ferait que complexifier inutilement les raisonnements. Dans la suite de ce document, et plus largement dans l'intégralité des ouvrages lus par votre serviteur, c'est toujours le sens conventionnel qui est utilisé.
 
 \subsection*{Intensité du courant}
 
@@ -105,6 +113,39 @@ avec~: \\
 	\item[$\bullet$] $t$ : le temps.
 \end{itemize}
 
-%\section{La puissance}
+\section{L'Energie électrique}
 
-%\section{L'Energie electrique}
+\textbf{Parler d'énergie électrique est au sens strict un abus de langage}. Ce n'est pas une véritable forme d'énergie comme peuvent l'être l'énergie cinétique ou l'énergie potentielle. Il s'agit plutôt d'un vecteur énergétique, c'est à dire un moyen de transférer de l'energie entre deux systèmes : l'électricité requiert et transporte de l'énergie. \\
+\index{energie@énergie}
+
+Ceci étant précisé, on la définit en général de la façon suivante~:
+
+\begin{equation}
+	E = q \cdot U
+\end{equation}
+
+avec~:
+\begin{itemize}
+	\item[$\bullet$] $E$ la quantité d'énergie en joules
+	\item[$\bullet$] $q$ la charge électrique en coulombs
+	\item[$\bullet$] $U$ la tension électrique en volts \\
+\end{itemize}
+
+si $I$ est le courant, on a $q = I \cdot \Delta t$, et donc :
+
+\begin{equation}
+	E = q \cdot U \\
+	  = I \cdot \Delta t \cdot U \\
+	  = U \cdot I \cdot \Delta t \\
+	  = P \cdot \Delta t \\
+\end{equation}
+
+avec $P$ la puissance électrique.\\
+\index{puissance}
+
+\section{La puissance}
+
+La puissance\index{puissance!puissance electrique@puissance électrique} est un taux d'énergie transférée par unité de temps.
+
+
+
