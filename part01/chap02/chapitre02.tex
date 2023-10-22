@@ -1,0 +1,174 @@
+\chapter{Les circuits électriques}
+
+\section{Circuit électrique}
+
+\index{circuit!circuit électrique@circuit électrique}
+\index{potentiel!difference de potentiel@différence de potentiel}
+\index{stationnaire!hypothèse du régime stationnaire}
+\index{hypothèse!hypothèse du régime stationnaire}
+\index{conducteur!conducteur parfait}
+
+Si l'on a un regard de physicien sur un schéma électronique, il devient très difficile de réfléchir sur un circuit tant les choses sont complexes. Les ondes électromagnétiques se propagent dans les conducteurs selon des lois difficiles à appréhender, et il se passe bien des choses entre et dans chaque composant. L'électronique repose donc sur quelques hypothèses de simplification nous permettant de raisonner simplement.  
+
+La première de ces hypothèses est l'\textbf{hypothèse du régime stationnaire}. Celle-ci implique que la propagation des ondes électromagnétiques est supposée terminée, et que nous pouvons négliger les effets qui en découlent. Ceci à deux conséquences : 
+
+\begin{itemize}
+\item \textbf{La tension est assimilée à la différence de potentiel} \\
+\item \textbf{Dans un conducteur parfait (de résistance nulle), la différence de potentiel est nulle.}
+\end{itemize}
+
+\index{blocs!blocs fonctionnels}
+\index{lumped!lumped elements}
+\index{elements!lumped elements}
+La seconde hypothèse importante est celle des \textbf{blocs fonctionnels} ("lumped elements" en anglais)~: ceci consiste à considérer que l'on peut représenter un circuit comme un ensemble de blocs simples (résistance, capacité, inductance, etc.) reliés entre eux par un réseau de fils parfaitement conducteurs.
+
+Sauf mention contraire (Par exemple quand nous nous intéresserons aux radiofréquences pour lesquelles on ne peut plus négliger la propagation des ondes), nous supposerons toujours ces hypothèses valides.
+
+\pagebreak
+\section{Les dipôles}
+
+\index{dipole@dipôle}
+Un \textbf{dipôle}, comme son nom l'indique, est un composant dôté de deux bornes. On peut citer comme exemple de dipôle les résistances, les condensateurs, les bobines, les diodes, etc. Le problème est alors que les tensions, tout comme les intensités, sont des grandeurs signées. Afin de pouvoir caractériser un composant, il nous faut donc se mettre d'accord sur la manière de les choisir.
+
+\subsection*{Convention recepteur}
+
+\index{recepteur@récepteur}
+\index{convention!convention recepteur@convention récepteur}
+\index{recepteur@récepteur!convention recepteur@convention récepteur}
+\index{dipole@dipôle!dipole recepteur@dipôle récepteur}
+Pour les dipôles récepteurs, c'est à dire les dipôles prenant de l'énergie au circuit, la convention adoptée est la \textbf{convention récepteur}. Elle consiste à placer les flêches de tension et de courant dans des sens opposés. 
+
+\begin{figure}[!h]
+\centering
+\includesvg{part01/chap02/convention_recepteur}
+\caption{Dipôle en convention récepteur}
+\end{figure}
+
+Les différentes lois que nous allons écrire pour les composants (la loi d'Ohm par exemple) seront exprimées selon cette convention.
+
+\subsection*{Convention générateur}
+
+\index{generateur@générateur}
+\index{convention!convention generateur@convention générateur}
+\index{generateur@générateur!convention generateur@convention générateur}
+\index{dipole@dipôle!dipole generateur@dipôle générateur}
+Pour les dipôles générateurs, c'est à dire les dipôles fournissant de l'énergie au circuit, la convention adoptée est la \textbf{convention générateur}. Elle consiste à placer les flêches de tension et de courant dans le même sens. 
+
+\begin{figure}[!h]
+\centering
+\includesvg{part01/chap02/convention_generateur}
+\caption{Dipôle en convention générateur}
+\end{figure}
+
+Les différentes lois que nous allons écrire pour les générateurs (batteries, piles, sources de signal, etc.) seront exprimées selon cette convention.
+
+\subsection*{Signe de la puissance électrique}
+
+\index{puissance!puissance electrique@puissance électrique}
+\index{puissance!convention generateur@convention générateur}
+\index{puissance!convention recepteur@convention récepteur}
+\index{puissance!signe}
+Dans l'expression du calcul de la puissance, $P=U \cdot I$, le signe du résultat va donc dépendre de la convention utilisée.
+
+\begin{table}[!h]
+\begin{center}
+\bgroup
+\def\arraystretch{1.5}%  1 is the default, change whatever you need
+\rowcolors{2}{blue!30}{blue!10}
+\begin{tabular}{|c|c|c|}
+	\hline
+	& \textbf{Convention Récepteur} & \textbf{Convention Générateur} \\
+	\hline
+	Récepteur physique  & $P<0$ & $P>0$ \\
+	\hline
+	Générateur physique & $P>0$ & $P<0$ \\
+	\hline
+\end{tabular}
+\egroup
+\end{center}
+	\caption{ Signe de la puissance }
+\end{table}
+
+\section{Lois de Kirchhoff}
+\index{kirchhoff}
+\index{kirchhoff!lois de Kirchhoff}
+\textbf{Les lois de Kirchhoff} expriment la conservation de l'énergie et de la charge dans un circuit électrique. Au nombre de deux (la loi des noeuds et la loi des mailles), elles permettent de déterminer les valeurs courants et les tensions dans le circuit.
+
+\subsection*{Loi des noeuds}
+\index{kirchhoff!loi des noeuds}
+\index{noeud!loi des noeuds}
+\index{courant!loi des noeuds}
+\index{noeud}
+\vspace{0.5cm}
+\begin{minipage}{3cm}
+\begin{center}
+\includesvg{part01/chap02/loi_des_noeuds}
+\end{center}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{10cm} 
+\textbf{La somme des intensités des courants qui entrent par un noeud est égale à la somme des intensités des courants qui sortent du même noeud.} \\
+	$$ I_2 + I_3 = I_1 + I_4 $$
+\end{minipage}\\
+
+\smallskip
+Cette loi découle directement de la conservation de la charge électrique, en tenant compte du fait qu'en régime stationnaire, ces charges ne peuvent pas s'accumuler à un endroit quelconque du circuit. Pour un noeud, cela veut donc dire que la quantité de charge entrante est égale à la quantité de charges sortantes.\\
+
+\subsection*{Loi des mailles}
+\index{kirchhoff!loi des mailles}
+\index{tension!loi des mailles}
+\index{maille!loi des mailles}
+\index{maille}
+\vspace{0.5cm}
+\begin{minipage}{3cm}
+\begin{center}
+\includesvg{part01/chap02/loi_des_mailles}
+\end{center}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{10cm} 
+\textbf{Dans une maille quelconque d'un circuit, la somme des différences de potentiel le long de la maille est nulle.} \\
+
+\hspace{1cm}
+\begin{minipage}{8cm} 
+Exemple~:
+\begin{center}
+$  U_1 - U_2 - U_3 - U_4 + U_6 = 0$ (Maille 1) 
+\end{center}
+Ou pour la maille passant par $U_5$~:
+\begin{center}
+$ U_1 - U_2 -U_3 - U_5 + U_6 = 0 $
+	\end{center}
+\end{minipage}\\
+\end{minipage}\\
+
+\smallskip
+Cette loi est valable dans l'approximation des régimes stationnaires, et à condition que les variations de flux magnétique à travers la maille soient négligeables.
+
+\section{Théorème de Millman}
+
+\textbf{Le théorème de Millman} est une variante de la loi des noeuds, écrite sous la forme de potentiels. Il s'énonce de la façon suivante~:\\
+
+\index{millman!theoreme de millman@théorème de Millman}
+\index{noeud!theoreme de millman@théorème de Millman}
+\index{potentiel!theoreme de millman@théorème de Millman}
+\vspace{0.5cm}
+\begin{minipage}{5cm}
+\begin{center}
+\includesvg{part01/chap02/millman}
+\end{center}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{10cm}
+
+	\textbf{Pour un noeud $M$, auquel sont connectées des branches contenant des résistances $R_i$ reliées à des potentiels $V_i$, le potentiel $V_M$ s'écrit~:}
+
+\begin{equation}
+	V_M = \dfrac{\displaystyle\sum_{i}\dfrac{V_i}{R_i}}{\displaystyle\sum_{i} \dfrac{1}{R_i} }
+\end{equation}
+
+\end{minipage}\\
+
+\smallskip
+Ce théorème peut également s'écrire avec des tensions (différences de potentiel).
+
