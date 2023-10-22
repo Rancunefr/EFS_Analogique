@@ -30,9 +30,9 @@
 
 \tableofcontents    
 
-%\input{introduction.tex}
-
 \mainmatter
+
+\input{introduction.tex}
 
 \part{ Les lois de base }
 
@@ -60,10 +60,12 @@
 
 %\appendix
 
-%\backmatter
+\backmatter
 
+\phantomsection
+\cleardoublepage
+\addcontentsline{toc}{part}{\indexname}
 \printindex
-\addcontentsline{toc}{part}{Index}
 
 % Fin du document
 \end{document}
