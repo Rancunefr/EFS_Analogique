@@ -1,0 +1,65 @@
+\chapter{ Les dipôles idéaux }
+
+Les \textbf{dipôles idéaux} correspondent à des relations entre la tension à leurs bornes et le courant qui les traverse (On parle de "\textbf{caractéristique courant/tension}"). Comme leur nom le laisse supposer, ces dipôles sont des représentations idéales des composants réels. Nous nous en servirons comme briques de base afin de modéliser les circuits. 
+
+\section{Les générateurs idéaux}
+
+\subsection{ Le générateur de tension }
+
+Un \textbf{générateur idéal de tension} est un générateur dont la tension est constante, et ce quel que soit le courant demandé.
+
+\begin{figure}[!h]
+\begin{center}
+\includesvg[scale=0.7]{part01/chap03/generateur_ideal_tension}
+\hspace{1cm}
+\includesvg[scale=0.7]{part01/chap03/carac_generateur_ideal_tension}
+\end{center}
+\caption{ Symbole et caractéristique courant/tension du générateur idéal de tension}
+\end{figure}
+
+Le générateur de tension ne peut être que théorique car mis en court-circuit, il devrait délivrer un courant infini et donc fournir au circuit une puissance également infinie.\\
+
+Cette définition du générateur idéal de tension est parfois étendue pour des générateurs dont la tension est une fonction du temps $u(t)$. Dans ce cas, la tension fournie ne dépendra que du temps et pas du courant. 
+
+\subsection{ Le générateur idéal de courant }
+
+Un \textbf{générateur idéal de courant} est un générateur fournissant un courant constant, et ce quel que soit la tension appliquée à ses bornes.
+
+\begin{figure}[!h]
+\begin{center}
+\includesvg[scale=0.7]{part01/chap03/generateur_ideal_courant}
+\hspace{1cm}
+\includesvg[scale=0.7]{part01/chap03/carac_generateur_ideal_courant}
+\end{center}
+\caption{ Symbole et caractéristique courant/tension du générateur idéal de courant}
+\end{figure}
+
+Tout comme le générateur idéal de tension, c'est un générateur théorique car dans le cas du circuit ouvert il fournirait une tension infinie.\\
+
+Ici encore, on peut étendre cette définition à des générateurs dont le courant n'est pas constant, mais une fonction du temps $I(t)$. Dans ce cas, le courant fourni ne dépendra que du temps et pas de la tension appliquée aux bornes du générateur.
+
+
+\section{ Les dipôles linéaires }
+
+On parle de \textbf{dipôles "linéaires"} (ce qui est un petit abus de langage) pour désigner les dipôles possédant une relation linéaire entre~:\\
+\begin{itemize}
+\item tension et courant, 
+\item tension et dérivée du courant,
+\item ou courant et dérivée de la tension.\\
+\end{itemize}
+
+Ces dipôles linéaires sont au nombre de trois~: \\
+
+\begin{itemize}
+\item \textbf{La résistance}
+\item \textbf{L'inductance}
+\item \textbf{La capacité} \\
+\end{itemize}
+
+Il faut bien faire la différence entre ces trois dipôles idéaux et leurs "incarnations" en composants que sont les résistors, les bobines et les condensateurs. \\
+
+\subsection{ La résistance }
+
+\subsection{ L'inductance }
+
+\subsection{ La capacité }
