@@ -60,6 +60,117 @@ Il faut bien faire la différence entre ces trois dipôles idéaux et leurs "inc
 
 \subsection{ La résistance }
 
+\vspace{0.5cm}
+\begin{tabular}{ll}
+\textbf{Notation usuelle~:} & $R$ \\
+\textbf{Unité~:} & Ohm ($\Omega$) \\
+\textbf{Unité SI~:} & $m^2 \cdot kg \cdot {s}^{-3} \cdot A^{-2}$ \\
+\textbf{Nature~:} & Grandeur scalaire \\
+\end{tabular} 
+
+\subsubsection*{Définition}
+
+La \textbf{résistance} traduit une relation linéaire entre courant et tension. Le symbole qui permet de la représenter est généralement l'un des deux suivants~:
+
+\begin{figure}[!h]
+\centering
+\begin{subfigure}{.4\textwidth}
+\centering
+	\includesvg[width=0.8\textwidth]{part01/chap03/symbole_r_euro}
+\caption{Symbole Euro}
+\end{subfigure}%
+\begin{subfigure}{.4\textwidth}
+\centering
+	\includesvg[width=0.8\textwidth]{part01/chap03/symbole_r_us} 
+\caption{Symbole US}
+\end{subfigure}
+\caption{Symbole de la résistance}
+\end{figure}
+
+Le comportement courant/tension d'une résistance est défini par la \textbf{loi d'Ohm}~:\\
+\begin{center}
+\begin{minipage}{.2\textwidth}
+\begin{center}
+\includesvg{part01/chap03/carac_R}
+\end{center}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{.3\textwidth} 
+\begin{equation}
+	I_R = \dfrac{U_R}{R}
+\end{equation}
+\end{minipage}
+\end{center}
+
+avec~:\\
+
+\begin{itemize}
+\item $U_R$ La tension aux bornes de la résistance
+\item $I_R$ Le courant traversant la résistance
+\item $R$ La valeur de la résistance en Ohms\\
+\end{itemize}
+
+
+Lorsqu'un conducteur montre une caractéristique courant/tension vérifiant la loi d'Ohm (une droite passant par l'origine), on parle de "\textbf{Conducteur ohmique}". On utilise parfois également les termes de "\textbf{résistance pure}" ou "\textbf{résistance idéale}".
+
+\subsubsection*{Effet Joule}
+
+Physiquement, le courant est un mouvement de porteurs de charge. Or dans un conducteur ohmique, ces porteurs interagissent avec les atomes constitutifs du milieu dans lequel ils se déplacent, ce qui constitue un frein à leur mouvement. Ceci se traduit par l'\textbf{effet~Joule}. C'est un effet thermique qui provoque une augmentation de l'énergie interne du conducteur, et généralement de sa température. \\
+
+L'énergie dissipée sous forme de chaleur entre deux instants $t_1$ et $t_2$ par un dipôle de résistance $R$ lorsque circule un courant d'intensité $i$ s'écrit~:
+
+$$ Q_{joule} = R \int_{t_1}^{t_2} i^2\,dt $$
+
+La puissance moyenne s'écrit alors~:
+
+$$ P = \dfrac{Q_{joule}}{t_2 - t_1} = \dfrac{R}{t_2 - t_1} \int_{t_1}^{t_2}i^2\,dt $$\\
+
+Dans le cas d'un courant \underline{constant} $I$, l'expression devient alors~:
+
+\begin{equation}
+	P = R\,I^2
+\end{equation}
+
+\subsubsection*{Résistance équivalente}
+
+La \textbf{résistance équivalente} consiste à remplacer dans une partie du circuit un ensemble de résistances par une seule, qui doit être équivalente (dans le sens où le comportement du circuit doit être le même).\\ 
+
+\begin{itemize}
+\item \underline{Association en série} : La résistance du dipôle équivalent vaut la somme des résistances de chacun des dipôles. \\
+
+\begin{center}
+\begin{minipage}{.2\textwidth}
+\begin{center}
+\includesvg{part01/chap03/r_serie}
+\end{center}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{.3\textwidth} 
+\begin{equation}
+	R_{eq} = R_1 + R_2
+\end{equation}
+\end{minipage}
+\end{center}
+
+\vspace{0.5cm}
+
+\item \underline{Association en parallèle} : l'inverse de la résistance du dipôle équivalent vaut la somme des inverses des résistances de chacun des dipôles. \\
+
+\begin{center}
+\begin{minipage}{.2\textwidth}
+\begin{center}
+	\includesvg{part01/chap03/r_parallele}
+\end{center}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{.3\textwidth} 
+\begin{equation}
+	\dfrac{1}{R_{eq}} = \dfrac{1}{R_1} + \dfrac{1}{R_2} 
+\end{equation}
+\end{minipage}
+\end{center}
+\end{itemize}
+
 \subsection{ L'inductance }
 
 \subsection{ La capacité }
