@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="5cm"
+   height="4cm"
+   viewBox="0 0 50 40"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="symbole_c.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="3.0708998"
+     inkscape:cx="49.985349"
+     inkscape:cy="28.656096"
+     inkscape:window-width="1916"
+     inkscape:window-height="1041"
+     inkscape:window-x="1920"
+     inkscape:window-y="37"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path2" />
+    </marker>
+    <rect
+       x="46.283252"
+       y="125.83528"
+       width="34.242776"
+       height="14.170848"
+       id="rect10" />
+    <rect
+       x="17.410908"
+       y="34.869759"
+       width="25.579346"
+       height="20.151089"
+       id="rect4" />
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <rect
+       x="17.410908"
+       y="34.869759"
+       width="25.579346"
+       height="20.151089"
+       id="rect4-6" />
+    <rect
+       x="17.410908"
+       y="34.869759"
+       width="25.579346"
+       height="20.151089"
+       id="rect4-7" />
+    <rect
+       x="17.410908"
+       y="34.869759"
+       width="44.575763"
+       height="12.991716"
+       id="rect4-2" />
+    <rect
+       x="17.410908"
+       y="34.869759"
+       width="192.96184"
+       height="15.978813"
+       id="rect4-6-2" />
+    <rect
+       x="46.283253"
+       y="125.83528"
+       width="17.62265"
+       height="16.143753"
+       id="rect10-7" />
+    <rect
+       x="17.410908"
+       y="34.869759"
+       width="192.96184"
+       height="15.978813"
+       id="rect4-6-2-0" />
+    <rect
+       x="17.410908"
+       y="34.869759"
+       width="192.96184"
+       height="15.978813"
+       id="rect4-6-2-0-6" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.67;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
+       d="M 0.52351348,16.583203 49.635308,16.606223"
+       id="path1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ff0000;stroke:#ff0000;stroke-width:0.66971px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2)"
+       d="m 3.9546505,16.576803 5.348665,0.02302"
+       id="path1-1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ff0000;stroke:#ff0000;stroke-width:0.639783px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Triangle)"
+       d="m 14.876848,24.779756 29.682469,0.04597"
+       id="path4"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.64821002,0,0,0.69192425,-45.243304,1.3785087)"
+       id="text4-9-2"
+       style="font-size:10.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4-6-2);display:inline;fill:#ff0000"
+       x="22.963614"
+       y="0"><tspan
+         x="90.024339"
+         y="44.30667"
+         id="tspan6"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan5">$U_{C}$</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.64821002,0,0,0.69192425,-65.781577,-19.380879)"
+       id="text4-9-2-3"
+       style="font-size:10.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4-6-2-0);display:inline;fill:#ff0000"
+       x="22.963614"
+       y="0"><tspan
+         x="92.355075"
+         y="44.30667"
+         id="tspan8"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan7">$I_{C}$</tspan></tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.330999;stroke-linecap:round"
+       id="rect1"
+       width="4.5078735"
+       height="13.127078"
+       x="26.304722"
+       y="10.031174" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.67;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
+       d="m 26.297579,9.876451 0,13.452625"
+       id="path3"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.67;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 30.662,9.8589849 V 23.31161"
+       id="path3-5"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>
