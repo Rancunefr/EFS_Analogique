@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
-   sodipodi:docname="superposition.svg"
+   sodipodi:docname="superposition_5.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.066514"
-     inkscape:cx="112.99222"
-     inkscape:cy="7.2586008"
+     inkscape:zoom="2.9224921"
+     inkscape:cx="105.21842"
+     inkscape:cy="23.609987"
      inkscape:window-width="1916"
      inkscape:window-height="1041"
      inkscape:window-x="1920"
@@ -102,25 +102,6 @@
        width="192.96184"
        height="15.978813"
        id="rect4-6-2-3" />
-    <marker
-       style="overflow:visible"
-       id="Triangle"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Triangle arrow"
-       markerWidth="1"
-       markerHeight="1"
-       viewBox="0 0 1 1"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path135" />
-    </marker>
     <rect
        x="17.410908"
        y="34.869759"
@@ -194,6 +175,24 @@
        width="192.96184"
        height="15.978813"
        id="rect4-6-2-3-6" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect5-3"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <rect
+       x="17.410908"
+       y="34.869759"
+       width="192.96184"
+       height="15.978813"
+       id="rect4-6-2-0-95-2-9" />
   </defs>
   <g
      inkscape:label="Calque 1"
@@ -218,9 +217,9 @@
        y="0"><tspan
          x="98.7327"
          y="44.30667"
-         id="tspan2"><tspan
+         id="tspan4"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan1">$I_G$</tspan></tspan></text>
+           id="tspan3">$I_G$</tspan></tspan></text>
     <circle
        style="fill:#ffffff;stroke:#1a1a1a;stroke-width:0.566794;stroke-linecap:round;stroke-dasharray:none"
        id="path3"
@@ -236,44 +235,22 @@
        transform="matrix(0,-0.84596169,0.84596169,0,33.091122,57.338415)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.559179px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 8.6283729,33.400886 8.6475939,6.2892832"
-       id="path1-9"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.559179px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 43.749737,33.333455 43.768958,6.2218527"
        id="path1-9-6"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.559179px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 8.1997646,33.157419 46.5682514,0.01922"
+       d="m 14.929721,33.157419 39.838295,0.01922"
        id="path1-9-5"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#ff0000;stroke:#ff0000;stroke-width:0.534192px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Triangle)"
-       d="m 1.8065068,19.304669 0.038385,13.344964"
-       id="path4"
-       sodipodi:nodetypes="cc" />
-    <text
-       xml:space="preserve"
-       transform="matrix(0.54122782,0,0,0.57772734,-66.839487,0.87366353)"
-       id="text4-9-2"
-       style="font-size:10.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4-6-2-3);display:inline;fill:#ff0000"
-       x="22.963614"
-       y="0"><tspan
-         x="89.615483"
-         y="44.30667"
-         id="tspan4"><tspan
-           style="text-align:center;text-anchor:middle"
-           id="tspan3">$U_{G}$</tspan></tspan></text>
-    <path
        style="fill:#008080;stroke:#008080;stroke-width:0.534192px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Triangle-6)"
-       d="m 29.792826,9.811673 0.03838,21.631535"
+       d="m 14.97615,9.811673 0.03838,21.631535"
        id="path4-9"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
-       transform="matrix(0.54122782,0,0,0.57772734,-41.499003,-4.3859994)"
+       transform="matrix(0.54122782,0,0,0.57772734,-57.374013,-4.3859994)"
        id="text4-9-2-4"
        style="font-size:10.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4-6-2-3-6);display:inline;fill:#008080"
        x="22.963614"
@@ -283,32 +260,11 @@
          id="tspan6"><tspan
            style="text-align:center;text-anchor:middle"
            id="tspan5">$U_{AB}$</tspan></tspan></text>
-    <circle
-       style="fill:#ffffff;stroke:#1a1a1a;stroke-width:0.559422;stroke-linecap:round;stroke-dasharray:none"
-       id="path3-9"
-       cx="8.6379929"
-       cy="24.705532"
-       r="4.7317877" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.67;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 32.771723,25.30236 c 3.772108,0 7.544215,0 11.316324,0"
-       id="path5-4"
-       transform="matrix(0.83495753,0,0,0.83495753,-23.449338,3.5493365)"
-       inkscape:original-d="m 32.771723,25.30236 c 3.772108,0 7.544215,0 11.316324,0"
-       inkscape:path-effect="#path-effect5-9" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.559179px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 8.3820114,6.5660024 54.806469,6.4630525"
+       d="M 14.9517,6.5660024 54.806469,6.4630525"
        id="path1-9-5-6"
        sodipodi:nodetypes="cc" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.40243;stroke-linecap:round;stroke-dasharray:none"
-       id="rect1"
-       width="4.0390439"
-       height="12.437166"
-       x="-8.534049"
-       y="11.011301"
-       transform="rotate(-90)" />
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.40243;stroke-linecap:round;stroke-dasharray:none"
        id="rect1-4"
@@ -319,18 +275,6 @@
        transform="scale(-1)" />
     <text
        xml:space="preserve"
-       transform="matrix(0.54836083,0,0,0.58534139,-48.871156,-11.907565)"
-       id="text4-9-2-3-4"
-       style="font-size:10.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4-6-2-0-95);display:inline;fill:#1a1a1a"
-       x="22.963614"
-       y="0"><tspan
-         x="97.339466"
-         y="44.30667"
-         id="tspan8"><tspan
-           style="text-align:center;text-anchor:middle"
-           id="tspan7">$R_1$</tspan></tspan></text>
-    <text
-       xml:space="preserve"
        transform="matrix(0.54836083,0,0,0.58534139,-15.431659,-8.1595095)"
        id="text4-9-2-3-4-2"
        style="font-size:10.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4-6-2-0-95-2);display:inline;fill:#1a1a1a"
@@ -338,24 +282,49 @@
        y="0"><tspan
          x="97.339466"
          y="44.30667"
+         id="tspan8"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan7">$R_2$</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.559179px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 30.849887,33.365888 30.869107,6.2542855"
+       id="path1-9-6-0"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.40243;stroke-linecap:round;stroke-dasharray:none"
+       id="rect1-4-9"
+       width="4.0390439"
+       height="12.437166"
+       x="-32.820419"
+       y="-26.031515"
+       transform="scale(-1)" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.54836083,0,0,0.58534139,-28.331509,-8.1270765)"
+       id="text4-9-2-3-4-2-6"
+       style="font-size:10.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4-6-2-0-95-2-9);display:inline;fill:#1a1a1a"
+       x="22.963614"
+       y="0"><tspan
+         x="97.339466"
+         y="44.30667"
          id="tspan10"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan9">$R_2$</tspan></tspan></text>
+           id="tspan9">$R_1$</tspan></tspan></text>
     <circle
        style="fill:#1a1a1a;stroke:#000000;stroke-width:0.669999;stroke-linecap:round"
        id="path6"
-       cx="29.797367"
+       cx="14.980688"
        cy="33.217854"
        r="0.3921493" />
     <circle
        style="fill:#1a1a1a;stroke:#000000;stroke-width:0.669999;stroke-linecap:round"
        id="path6-1"
-       cx="29.797367"
+       cx="14.980688"
        cy="6.5028157"
        r="0.3921493" />
     <text
        xml:space="preserve"
-       transform="matrix(0.54836083,0,0,0.58534139,-30.757735,-13.743722)"
+       transform="matrix(0.54836083,0,0,0.58534139,-45.574411,-13.743722)"
        id="text4-9-2-3-4-0"
        style="font-size:10.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4-6-2-0-95-4);display:inline;fill:#1a1a1a"
        x="22.963614"
@@ -367,7 +336,7 @@
            id="tspan11">$A$</tspan></tspan></text>
     <text
        xml:space="preserve"
-       transform="matrix(0.54836083,0,0,0.58534139,-30.757735,6.011624)"
+       transform="matrix(0.54836083,0,0,0.58534139,-45.574411,6.011624)"
        id="text4-9-2-3-4-0-5"
        style="font-size:10.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4-6-2-0-95-4-1);display:inline;fill:#1a1a1a"
        x="22.963614"

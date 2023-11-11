@@ -1,7 +1,16 @@
 \chapter{Les circuits linéaires}
 
 \index{ciyyrcuit!circuit lineaire@circuit linéaire}
-On appelle "\textbf{circuit linéaire}" tout circuit formé uniquement de dipôles linéaires (résistances, générateurs de courant ou de tension, capacités et inductances).
+On appelle "\textbf{circuit linéaire}" tout circuit formé uniquement de dipôles linéaires (résistance, capacités et inductances) et de sources de tension ou de courant indépendantes. \\
+
+Les circuits linéaires sont une grande famille de circuits particulièrement faciles à manipuler, car cette propriété de linéarité nous donne des théorèmes très utiles :\\
+
+\begin{itemize}
+\item Le théorème de superposition
+\item Le théorème de Thévenin
+\item Le théorème de Norton
+\end{itemize}
+
 
 \section{Théorème de superposition}
 
@@ -15,8 +24,9 @@ Pour "éteindre" une source de tension, on la remplace par un fil. \\
 
 Pour "éteindre" une source de courant, on la remplace par un circuit ouvert. \\
 
-On somme ensuite toutes les contributions pour obtenir le résultat.
+On somme ensuite toutes les contributions pour obtenir le résultat final.
 
+\pagebreak
 \subsubsection*{Exemple~:}
 
 On cherche la valeur de la tension $U_{AB}$ dans le circuit suivant~:
@@ -26,18 +36,58 @@ On cherche la valeur de la tension $U_{AB}$ dans le circuit suivant~:
 \end{center}
 
 
+\subsubsection*{Calcul de la contribution de $U_G$}
 
 
+On "éteint" tous les générateurs à l'exception du générateur de tension $U_G$. Le circuit devient alors~:
 
+\begin{center}
+	\includesvg[scale=0.8]{part01/chap04/superposition_2}
+\end{center}
 
+On peut alors le réarranger afin de le rendre plus facilement lisible~:
 
+\begin{center}
+	\includesvg[scale=0.8]{part01/chap04/superposition_3}
+\end{center}
 
+Le courant débité par le générateur $U_G$ s'écrit alors :
 
+$$ I = \dfrac{U_G}{R_1 + R_2} $$
 
+Ce courant traversant la résistance $R_2$, on peut alors écrire~:
 
+$$ U_{AB} = R_2 \, I = \dfrac{R_2}{R_1 + R_2} U_G $$
 
+\subsubsection*{Calcul de la contribution de $I_G$}
 
+On "éteint" cette fois-ci tous les générateurs à l'exception du générateur de courant. $U_G$ est donc remplacé par un fil :
 
+\begin{center}
+	\includesvg[scale=0.8]{part01/chap04/superposition_4}
+\end{center}
+
+Une fois réarrangé un peu, le schéma devient~:
+
+\begin{center}
+	\includesvg[scale=0.8]{part01/chap04/superposition_5}
+\end{center}
+
+En utilisant la résistance équivalente, il vient alors~:
+
+$$ U_{AB} = R_{eq}\,I_G = \dfrac{R_1 R_2}{R_1 + R_2}\,I_G $$
+
+\subsubsection*{Conclusion}
+
+\begin{center}
+	\includesvg[scale=0.8]{part01/chap04/superposition}
+\end{center}
+
+Pour obtenir la réponse finale, il suffit alors de sommer les contributions des différentes sources~:
+
+$$ U_{AB} = \underbrace{\dfrac{R_2}{R_1 + R_2} U_G}_{Contribution\,de\,U_G} + \underbrace{\dfrac{R_1 R_2}{R_1 + R_2}\,I_G}_{Contribution\,de\,I_G} $$
+
+\pagebreak
 
 \section{Théorème de Thévenin}
 
@@ -46,9 +96,16 @@ Ce théorème découle des propriétés de linéarité des circuits considérés
 \textbf{"Un réseau électrique linéaire vu de deux points est équivalent à un générateur de tension parfait dont la force électromotrice est égale à la différence de potentiels à vide entre ces deux points, en série avec une résistance égale à celle que l'on mesure entre les deux points lorsque les générateurs indépendants sont rendus passifs."}
 
 
+\begin{center}
+	\includesvg{part01/chap04/thevenin}
+\end{center}
 
-\section{Théorème de Norton}
+La tension $E_{Th}$ du générateur de Thévenin est égale à la tension à vide du montage, mesurée entre $A$ et $B$.
 
-\section{Equivalence entre Thévenin et Norton}
-\section{Le diviseur de tension}
-\section{Le diviseur de courant}
+
+
+%\section{Théorème de Norton}
+
+%\section{Equivalence entre Thévenin et Norton}
+%\section{Le diviseur de tension}
+%\section{Le diviseur de courant}

@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
-   sodipodi:docname="superposition.svg"
+   sodipodi:docname="superposition_4.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -102,25 +102,6 @@
        width="192.96184"
        height="15.978813"
        id="rect4-6-2-3" />
-    <marker
-       style="overflow:visible"
-       id="Triangle"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Triangle arrow"
-       markerWidth="1"
-       markerHeight="1"
-       viewBox="0 0 1 1"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         transform="scale(0.5)"
-         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path135" />
-    </marker>
     <rect
        x="17.410908"
        y="34.869759"
@@ -250,23 +231,6 @@
        id="path1-9-5"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#ff0000;stroke:#ff0000;stroke-width:0.534192px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Triangle)"
-       d="m 1.8065068,19.304669 0.038385,13.344964"
-       id="path4"
-       sodipodi:nodetypes="cc" />
-    <text
-       xml:space="preserve"
-       transform="matrix(0.54122782,0,0,0.57772734,-66.839487,0.87366353)"
-       id="text4-9-2"
-       style="font-size:10.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4-6-2-3);display:inline;fill:#ff0000"
-       x="22.963614"
-       y="0"><tspan
-         x="89.615483"
-         y="44.30667"
-         id="tspan4"><tspan
-           style="text-align:center;text-anchor:middle"
-           id="tspan3">$U_{G}$</tspan></tspan></text>
-    <path
        style="fill:#008080;stroke:#008080;stroke-width:0.534192px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Triangle-6)"
        d="m 29.792826,9.811673 0.03838,21.631535"
        id="path4-9"
@@ -280,22 +244,9 @@
        y="0"><tspan
          x="86.440994"
          y="44.30667"
-         id="tspan6"><tspan
+         id="tspan4"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan5">$U_{AB}$</tspan></tspan></text>
-    <circle
-       style="fill:#ffffff;stroke:#1a1a1a;stroke-width:0.559422;stroke-linecap:round;stroke-dasharray:none"
-       id="path3-9"
-       cx="8.6379929"
-       cy="24.705532"
-       r="4.7317877" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.67;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 32.771723,25.30236 c 3.772108,0 7.544215,0 11.316324,0"
-       id="path5-4"
-       transform="matrix(0.83495753,0,0,0.83495753,-23.449338,3.5493365)"
-       inkscape:original-d="m 32.771723,25.30236 c 3.772108,0 7.544215,0 11.316324,0"
-       inkscape:path-effect="#path-effect5-9" />
+           id="tspan3">$U_{AB}$</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.559179px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 8.3820114,6.5660024 54.806469,6.4630525"
@@ -326,9 +277,9 @@
        y="0"><tspan
          x="97.339466"
          y="44.30667"
-         id="tspan8"><tspan
+         id="tspan6"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan7">$R_1$</tspan></tspan></text>
+           id="tspan5">$R_1$</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.54836083,0,0,0.58534139,-15.431659,-8.1595095)"
@@ -338,9 +289,9 @@
        y="0"><tspan
          x="97.339466"
          y="44.30667"
-         id="tspan10"><tspan
+         id="tspan8"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan9">$R_2$</tspan></tspan></text>
+           id="tspan7">$R_2$</tspan></tspan></text>
     <circle
        style="fill:#1a1a1a;stroke:#000000;stroke-width:0.669999;stroke-linecap:round"
        id="path6"
@@ -362,9 +313,9 @@
        y="0"><tspan
          x="103.45667"
          y="44.30667"
-         id="tspan12"><tspan
+         id="tspan10"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan11">$A$</tspan></tspan></text>
+           id="tspan9">$A$</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.54836083,0,0,0.58534139,-30.757735,6.011624)"
@@ -374,8 +325,8 @@
        y="0"><tspan
          x="103.44626"
          y="44.30667"
-         id="tspan14"><tspan
+         id="tspan12"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan13">$B$</tspan></tspan></text>
+           id="tspan11">$B$</tspan></tspan></text>
   </g>
 </svg>
