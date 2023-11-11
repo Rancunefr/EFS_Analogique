@@ -1,11 +1,18 @@
 \chapter{ Les dipôles idéaux }
 
+\index{dipole@dipôle!dipole ideal@dipôle idéal}
+\index{courant!caracteristique courant tension@caractéristique courant tension}
+\index{tension!caracteristique courant tension@caractéristique courant tension}
 Les \textbf{dipôles idéaux} correspondent à des relations entre la tension à leurs bornes et le courant qui les traverse (On parle de "\textbf{caractéristique courant/tension}"). Comme leur nom le laisse supposer, ces dipôles sont des représentations idéales des composants réels. Nous nous en servirons comme briques de base afin de modéliser les circuits. 
 
 \section{Les générateurs idéaux}
 
+\index{generateur@générateur}
+\index{generateur@générateur!generateur ideal@générateur idéal}
 \subsection{ Le générateur de tension }
 
+\index{generateur@générateur!generateur de tension@générateur de tension}
+\index{tension!generateur de tension@générateur de tension}
 Un \textbf{générateur idéal de tension} est un générateur dont la tension est constante, et ce quel que soit le courant demandé.
 
 \begin{figure}[!h]
@@ -23,6 +30,8 @@ Cette définition du générateur idéal de tension est parfois étendue pour de
 
 \subsection{ Le générateur idéal de courant }
 
+\index{generateur@générateur!generateur de courant@générateur de courant}
+\index{courant!generateur de courant@générateur de courant}
 Un \textbf{générateur idéal de courant} est un générateur fournissant un courant constant, et ce quel que soit la tension appliquée à ses bornes.
 
 \begin{figure}[!h]
@@ -41,6 +50,10 @@ Ici encore, on peut étendre cette définition à des générateurs dont le cour
 
 \section{ Les dipôles linéaires }
 
+\index{dipole@dipôle!dipole linéaire@dipôle linéaire}
+\index{resistor@résistor}
+\index{bobine}
+\index{condensateur}
 On parle de \textbf{dipôles "linéaires"} (ce qui est un petit abus de langage) pour désigner les dipôles possédant une relation linéaire entre~:\\
 \begin{itemize}
 \item tension et courant, 
@@ -60,6 +73,8 @@ Il faut bien faire la différence entre ces trois dipôles idéaux et leurs "inc
 
 \subsection{ La résistance }
 
+\index{resistance@résistance}
+\index{ohm}
 \vspace{0.5cm}
 \begin{tabular}{ll}
 \textbf{Notation usuelle~:} & $R$ \\
@@ -72,6 +87,7 @@ Il faut bien faire la différence entre ces trois dipôles idéaux et leurs "inc
 
 La \textbf{résistance} traduit une relation linéaire entre courant et tension. Le symbole qui permet de la représenter est généralement l'un des deux suivants~:
 
+\index{resistance@résistance!symbole}
 \begin{figure}[!h]
 \centering
 \begin{subfigure}{.4\textwidth}
@@ -87,6 +103,8 @@ La \textbf{résistance} traduit une relation linéaire entre courant et tension.
 \caption{Symbole de la résistance}
 \end{figure}
 
+\index{resistance@résistance!loi d'Ohm}
+\index{ohm!loi d'Ohm}
 Le comportement courant/tension d'une résistance est défini par la \textbf{loi d'Ohm}~:\\
 \begin{center}
 \begin{minipage}{.2\textwidth}
@@ -113,10 +131,14 @@ avec~:\\
 
 Lorsqu'un conducteur montre une caractéristique courant/tension vérifiant la loi d'Ohm (une droite passant par l'origine), on parle de "\textbf{Conducteur ohmique}". On utilise parfois également les termes de "\textbf{résistance pure}" ou "\textbf{résistance idéale}".
 
+\index{conducteur!conducteur ohmique}
+\index{resistance@résistance!resistance pure@résistance pure}
+\index{resistance@résistance!resistance ideale@résistance idéale}
 \subsubsection*{Effet Joule}
 
 Physiquement, le courant est un mouvement de porteurs de charge. Or dans un conducteur ohmique, ces porteurs interagissent avec les atomes constitutifs du milieu dans lequel ils se déplacent, ce qui constitue un frein à leur mouvement. Ceci se traduit par l'\textbf{effet~Joule}. C'est un effet thermique qui provoque une augmentation de l'énergie interne du conducteur, et généralement de sa température. \\
 
+\index{Joule!resistance ideale@effet Joule}
 L'énergie dissipée sous forme de chaleur entre deux instants $t_1$ et $t_2$ par un dipôle de résistance $R$ lorsque circule un courant d'intensité $i$ s'écrit~:
 
 $$ Q_{joule} = R \int_{t_1}^{t_2} i^2\,dt $$
@@ -133,11 +155,13 @@ Dans le cas d'un courant \underline{constant} $I$, l'expression devient alors~:
 
 \subsubsection*{Résistance équivalente}
 
+\index{resistance@résistance!resistance equivalente@résistance équivalente}
 La \textbf{résistance équivalente} consiste à remplacer dans une partie du circuit un ensemble de résistances par une seule, qui doit être équivalente (dans le sens où le comportement du circuit doit être le même).\\ 
 
 \begin{itemize}
 \item \underline{Association en série} : La résistance du dipôle équivalent vaut la somme des résistances de chacun des dipôles. \\
 
+\index{resistance@résistance!association en serie@association en série}
 \begin{center}
 \begin{minipage}{.2\textwidth}
 \begin{center}
@@ -156,6 +180,7 @@ La \textbf{résistance équivalente} consiste à remplacer dans une partie du ci
 
 \item \underline{Association en parallèle} : l'inverse de la résistance du dipôle équivalent vaut la somme des inverses des résistances de chacun des dipôles. \\
 
+\index{resistance@résistance!association en parrallele@association en parallèle}
 \begin{center}
 \begin{minipage}{.2\textwidth}
 \begin{center}
@@ -173,6 +198,8 @@ La \textbf{résistance équivalente} consiste à remplacer dans une partie du ci
 
 \subsection{ La capacité électrique }
 
+\index{capacite@capacité!capacite electrique@capacité électrique}
+\index{farad}
 \vspace{0.5cm}
 \begin{tabular}{ll}
 \textbf{Notation usuelle~:} & $C$ \\
@@ -183,10 +210,8 @@ La \textbf{résistance équivalente} consiste à remplacer dans une partie du ci
 
 \subsubsection*{Définition}
 
-
-La \textbf{capacité électrique} est l'aptitude d'un conducteur ou d'un dipôle à stocker une charge électrique en réponse à une différence de potentiel. Elle est exprimée sous la forme d'un ratio entre ces deux quantités. \\
-
-La capacité traduit donc une relation linéaire entre charge et différence de potentiel~:
+\index{charge!charge electrique@charge électrique}
+La \textbf{capacité électrique} est l'aptitude d'un conducteur ou d'un dipôle à stocker une charge électrique en réponse à une différence de potentiel. Elle est exprimée sous la forme d'un ratio entre ces deux quantités. La capacité traduit donc une relation linéaire entre charge et différence de potentiel~:
 
 \begin{equation}
 	Q = C\,U
@@ -199,10 +224,38 @@ avec~:\\
 	\item $U$ la différence de potentiel\\
 \end{itemize}
 
-En physique, on distingue généralement la "\textbf{capacité propre}" (self capacitance) de la "\textbf{capacité mutuelle}" (mutual capacitance). Un objet qui peut être chargé électriquement montre une capacité propre : on mesure alors le potentiel électrique par rapport à la terre. La capacité mutuelle, elle, est mesurée entre deux objets différents. Par exemple entre les deux armatures d'un condensateur. \\
+\index{capacite@capacité!capacite propre@capacité propre}
+\index{capacite@capacité!capacite mutuelle@capacité mutuelle}
+\index{capacitance@self capacitance}
+\index{capacitance@mutual capacitance}
+En physique, on distingue généralement la "\textbf{capacité propre}" (self capacitance) de la "\textbf{capacité mutuelle}" (mutual capacitance). Un objet qui peut être chargé électriquement montre une capacité propre : on mesure alors le potentiel électrique par rapport à la terre. La capacité mutuelle, elle, est mesurée entre deux objets différents. Par exemple entre les deux armatures d'un condensateur. 
+
+\subsubsection{ Note à propos du farad~: }
+
+\index{farad}
+L'unité utilisée pour la capacité électrique, le farad, est très grande ! En pratique, on en utilise le plus souvent des sous-multiples : le microfarad ($\mu F$), le nanofarad ($nF$) ou le picofarad ($pF$). 
+
+
+\subsubsection{ Relation Courant-Tension~: }
+
+\index{capacite@capacité!caracteristique courant tension@caractéristique courant tension}
+Si on note $Q$ la charge de l'armature positive du condensateur parfait, on a bien~:
+
+$$Q = C\,U_C$$
+
+Ce qui en dérivant par le temps, donne~:
+
+$$\dfrac{dQ}{dt} = C\,\dfrac{dU_C}{dt}$$
+
+En revenant à la définition du courant, on reconnait dans la partie gauche de l'équation l'écriture de l'intensité. On a alors~:
+
+\begin{equation}
+	I_C = C\,\dfrac{dU_C}{dt}
+\end{equation}
 
 \subsubsection{Le condensateur idéal}
 
+\index{condensateur!condensateur ideal@condensateur idéal}
 Le condensateur idéal est un dipôle au comportement purement capacitif, formé de deux armatures conductrices parallèles séparées par un isolant, le diéléctrique. On le représente à l'aide du symbole suivant~:
 
 \begin{figure}[!h]
@@ -211,17 +264,148 @@ Le condensateur idéal est un dipôle au comportement purement capacitif, formé
 \caption{Symbole du condensateur simple}
 \end{figure}
 
+\subsubsection{ Capacité équivalente~: }
 
+\index{condensateur!condensateur equivalent@condensateur équivalent}
+\index{capacite@capacité!capacite equivalente@capacité équivalente}
+Tout comme pour les résistances, on définit la \textbf{capacité équivalente} qui consiste à remplacer un ensemble de capacités par une seule.\\ 
 
-%\subsubsection{ Relation courant/tension }
+\begin{itemize}
+\item \underline{Association en série} : \\
+
+\index{capacite@capacité!association en serie@association en série}
+\begin{center}
+\begin{minipage}{.2\textwidth}
+\begin{center}
+\includesvg{part01/chap03/c_serie}
+\end{center}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{.3\textwidth} 
+\begin{equation}
+	\dfrac{1}{C_{eq}} = \dfrac{1}{C_1} + \dfrac{1}{C_2}
+\end{equation}
+\end{minipage}
+\end{center}
+
+\vspace{0.5cm}
+
+\item \underline{Association en parallèle} : \\
+
+\index{capacite@capacité!association en parallele@association en parallèle}
+\begin{center}
+\begin{minipage}{.2\textwidth}
+\begin{center}
+	\includesvg{part01/chap03/c_parallele}
+\end{center}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{.3\textwidth} 
+\begin{equation}
+	C_{eq} = C_1 + C_2
+\end{equation}
+\end{minipage}
+\end{center}
+\end{itemize}
+
 
 \subsection{ L'inductance }
+
+\index{inductance}
+\index{Henry}
+\vspace{0.5cm}
+\begin{tabular}{ll}
+\textbf{Notation usuelle~:} & $L$ \\
+\textbf{Unité~:} & Henry (H) \\
+	\textbf{Unité SI~:} & $m^2 \cdot kg \cdot {s}^{-2} \cdot A^{-2}$ \\
+\textbf{Nature~:} & Grandeur scalaire \\
+\end{tabular} 
+
+\subsubsection*{Définition}
+
+\index{inductance}
+L'\textbf{inductance} est la tendance d'un conducteur électrique à s'opposer à tout changement du courant le traversant. \\
+
+Lorsqu'un courant electrique parcourt un conducteur, un champs magnétique se crée autour de ce conducteur. La force de ce champs magnétique dépend de l'amplitude du courant et en suit donc les changements. Cependant, d'après la loi de Faraday, tout changement d'un champs magnétique induit une force electromotrice (tension) dans le conducteur. Cette tension induite créée par le changement de courant a pour effet de s'opposer à ce dernier. \\
+
+\subsubsection{Relation Courant-Tension}
+
+\index{inductance!caracteristique courant tension@caractéristique courant tension}
+\index{EMF!back-EMF}
+\index{force!force contre-electromotrice}
+\index{auto-inductance}
+\index{inductance!auto-inductance}
+Comme le veut la loi d'Ampère, un courant $i$ circulant dans un conducteur génère un champs magnétique $\vec{B}$ autour de ce conducteur. Le flux $\Phi$ de ce champs magnétique au travers du circuit $C$ est égal à l'intégrale suivante : 
+
+$$\Phi = \iint_{C}{\vec{B}.\vec{dA}}$$ 
+
+Si le courant varie, le flux magnétique $\Phi$ varie également. Or d'après la loi de Faraday, tout changement dans le flux magnétique au travers d'un circuit induit dans ce dernier une force électromotrice ($ \varepsilon $)~:
+
+$$ \varepsilon (t) = - \,\dfrac{d}{dt} \Phi(t) $$
+
+Le signe moins dans cette équation nous indique que le voltage induit est dans une orientation qui tend à s'opposer au changement de courant. On l'appelle souvent pour cette raison "\textbf{force contre-electromotrice}" ou "\textbf{back-EMF}".\\
+
+L'{auto-inductance}, plus généralement nommée "inductance" $L$, est le ratio entre le voltage induit et le changement de courant. En convention récepteur, on a la relation :
+
+\begin{equation}
+	U_L = L \, \dfrac{dI_L}{dt}
+\end{equation}
+
+\subsubsection{ Inductance idéale }
+\index{bobine!bobine simple}
+\index{bobine!bobine ideale@bobine idéale}
+\index{inductance!inductance ideale@inductance idéale}
+On définit l'inductance, aussi appelée \textbf{bobine simple} ou \textbf{bobine idéale}, comme un dipôle au comportement purement inductif ( les effets capacitifs et ohmiques sont donc négligés ). On la représente à l’aide du symbole suivant :
 
 \begin{figure}[!h]
 \centering
 \includesvg{part01/chap03/symbole_l}
-\caption{Symbole du condensateur simple}
+	\caption{Symbole de l'inductance}
 \end{figure}
+
+\index{inductance!symbole}
+I\subsubsection{ Inductance équivalente~: }
+
+\index{inductance!inductance equivalente@inductance équivalente}
+Le calcul de l'\textbf{inductance équivalente} se fait de façon similaire à celle des résistances~:\\ 
+
+\begin{itemize}
+\item \underline{Association en série} : \\
+
+\index{inductance!association en serie@association en série}
+\begin{center}
+\begin{minipage}{.2\textwidth}
+\begin{center}
+\includesvg{part01/chap03/l_serie}
+\end{center}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{.3\textwidth} 
+\begin{equation}
+	L_{eq} = L_1 + L_2
+\end{equation}
+\end{minipage}
+\end{center}
+
+\vspace{0.5cm}
+
+\item \underline{Association en parallèle} : \\
+\index{inductance!association en parrallele@association en parrallèle}
+
+\begin{center}
+\begin{minipage}{.2\textwidth}
+\begin{center}
+	\includesvg{part01/chap03/l_parallele}
+\end{center}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{.3\textwidth} 
+\begin{equation}
+	\dfrac{1}{L_{eq}} = \dfrac{1}{L_1} + \dfrac{1}{L_2}
+\end{equation}
+\end{minipage}
+\end{center}
+\end{itemize}
 
 
 
