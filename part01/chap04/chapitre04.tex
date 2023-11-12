@@ -1,6 +1,6 @@
 \chapter{Les circuits linéaires}
 
-\index{ciyyrcuit!circuit lineaire@circuit linéaire}
+\index{circuit!circuit lineaire@circuit linéaire}
 On appelle "\textbf{circuit linéaire}" tout circuit formé uniquement de dipôles linéaires (résistance, capacités et inductances) et de sources de tension ou de courant indépendantes. \\
 
 Les circuits linéaires sont une grande famille de circuits particulièrement faciles à manipuler, car cette propriété de linéarité nous donne des théorèmes très utiles :\\
@@ -14,6 +14,8 @@ Les circuits linéaires sont une grande famille de circuits particulièrement fa
 
 \section{Théorème de superposition}
 
+\index{theoreme@théorème!theoreme de superposition@théorème de superposition}
+\index{theoreme@théorème!theoreme de helmotz@théorème de Helmotz}
 Le \textbf{théorème de superposition}, ou "\textbf{théorème de Helmotz}" est rendu possible par la linéarité des équations régissant cette famille de circuit. Il s'exprime en ces termes~:\\
 
 \textbf{Dans un circuit linéaire avec plusieurs sources, le courant et la tension pour tout élément du circuit est la somme des courants et des tensions produits par chaque source agissant indépendamment.} \\
@@ -91,21 +93,119 @@ $$ U_{AB} = \underbrace{\dfrac{R_2}{R_1 + R_2} U_G}_{Contribution\,de\,U_G} + \u
 
 \section{Théorème de Thévenin}
 
+\index{theoreme@théorème!theoreme de thevenin@théorème de Thévenin}
+\index{thevenin@thévenin!theoreme de thevenin@théorème de Thévenin}
 Ce théorème découle des propriétés de linéarité des circuits considérés et donc du théorème de superposition. Il s'énonce de la façon suivante : \\
 
 \textbf{"Un réseau électrique linéaire vu de deux points est équivalent à un générateur de tension parfait dont la force électromotrice est égale à la différence de potentiels à vide entre ces deux points, en série avec une résistance égale à celle que l'on mesure entre les deux points lorsque les générateurs indépendants sont rendus passifs."}
 
-
+\begin{figure}[!h]
 \begin{center}
 	\includesvg{part01/chap04/thevenin}
 \end{center}
+\caption{Modèle de Thévenin}
+\end{figure}
+La tension $E_{Th}$ du générateur de Thévenin est égale à la tension à vide du montage, mesurée entre $A$ et $B$. \\
 
-La tension $E_{Th}$ du générateur de Thévenin est égale à la tension à vide du montage, mesurée entre $A$ et $B$.
+Pour trouver la résistance de Thévenin $R_{Th}$, on "éteint" tous les générateurs et on détermine la résistance équivalente entre $A$ et $B$.
+
+\section{Théorème de Norton}
+
+\index{theoreme@théorème!theoreme de norton@théorème de Norton}
+\index{norton@norton!theoreme de norton@théorème de Norton}
+De façon analogue, le \textbf{théorème de Norton} nous dit qu'il est possible de remplacer un circuit linéaire par un dipôle comprenant un générateur de courant et une résistance en parrallèle : 
+
+\begin{figure}[!h]
+\begin{center}
+	\includesvg{part01/chap04/norton}
+\end{center}
+\caption{Modèle de Norton}
+\end{figure}
 
 
+Pour déterminer la valeur de $I_N$, on connecte un fil entre les points $A$ et $B$ et on détermine le courant traversant ce fil. \\
 
-%\section{Théorème de Norton}
+Pour déterminer la valeur de la résistance $R_N$, on procède de la même façon que pour le théorème de Thévenin : On éteint toutes les sources de courant ou de tension et on calcule la résistance équivalente entre $A$ et $B$.
 
-%\section{Equivalence entre Thévenin et Norton}
-%\section{Le diviseur de tension}
-%\section{Le diviseur de courant}
+\section{Equivalence entre Thévenin et Norton}
+
+\index{norton@norton!equivalence norton thevenin@équivalence Norton Thévenin}
+\index{thevenin@thévenin!equivalence thevenin norton@équivalence Thévenin Norton}
+Les modèles de Thévenin et de Norton sont équivalents. Il est possible de passer de l'un à l'autre par la relation suivante~:
+
+\begin{figure}[!h]
+\begin{center}
+\includesvg{part01/chap04/eq_thevenin_norton}
+\end{center}
+\caption{Equivalence entre les modèles de Thévenin et Norton}
+\end{figure}
+
+\section{Le diviseur de tension}
+
+\index{diviseur!diviseur de tension}
+\index{tension!diviseur de tension}
+\index{pont!pont diviseur de tension}
+Le \textbf{diviseur de tension}, aussi appelé "\textbf{pont diviseur}", est un circuit passif linéaire permettant de produire une tension de sortie $U_{out}$ qui est une fraction de la tension d'entrée $U_{in}$. Il se forme à l'aide de deux résistances~:
+
+\begin{figure}[!h]
+\begin{center}
+\begin{minipage}{8cm}
+	\includesvg[scale=0.9]{part01/chap04/diviseur_tension}
+\end{minipage}
+\begin{minipage}{8cm}
+
+	\textbf{\underline{Pont diviseur à vide~:}}\\
+
+	Si l'on suppose qu'aucun courant ne sort du pont diviseur~:
+	\begin{equation}
+		U_{out} = \dfrac{R_2}{R_1 + R_2}\,U_{in}
+	\end{equation}
+\end{minipage}
+\end{center}
+\caption{Diviseur de tension}
+\end{figure}
+
+Cette relation n'est cependant valable que si le courant sortant du pont diviseur est nul ou négligeable devant le courant traversant $R_2$. Si ce n'est pas le cas, on est alors dans le cas du \textbf{diviseur de tension chargé}~:\\
+
+
+\begin{center}
+	\includesvg[scale=0.9]{part01/chap04/diviseur_tension_load}
+\end{center}
+
+Le courant $I_{out}$ en sortie du pont diviseur n'est plus considéré comme négligeable. On utilise alors la résistance équivalente au couple $R_2$ et $R_L$ et la relation devient~:
+
+$$ U_{out} = U_{in}\,\dfrac{R_{eq}}{R_1+R_{eq}} = U_{in} \, \dfrac{ R_2R_L }{R_1R_2 + R_1R_L + R_2R_L} $$
+
+
+\section{Le diviseur de courant}
+
+\index{diviseur!diviseur de courant}
+\index{courant!diviseur de courant}
+\index{pont!pont diviseur de courant}
+La formule du \textbf{diviseur de courant} permet de calculer l'intensité du courant dans une résistance lorsque celle-ci fait partie d'un ensemble de résistances en parallèle et lorsque l'on connaît le courant total qui alimente cet ensemble. C'est le montage dual du diviseur de tension.
+
+
+\begin{center}
+\begin{minipage}{8cm}
+	\includesvg[scale=0.9]{part01/chap04/diviseur_courant}
+\end{minipage}
+\begin{minipage}{8cm}
+
+	Le courant qui traverse $R_1$ s'écrit~:
+	$$	I_{1} = I \, \dfrac{\dfrac{1}{R_1}}{\dfrac{1}{R_1} + \dfrac{1}{R_2} + \dots + \dfrac{1}{R_n}} $$
+
+	ou encore, exprimé avec les conductances~:
+
+	$$ I_1 = I \, \dfrac{ G_1 } { G_1 + G_2 + \dots + G_n } $$
+\end{minipage}\\
+\end{center}
+
+\vspace{5mm}
+
+\begin{flushleft}
+\textbf{\underline{Note:}} 
+\end{flushleft}
+
+\index{conductance}
+La \textbf{conductance électrique} d'un matériau soumis à une différence de potentiel quantifie sa capacité à laisser passer un courant électrique. C'est une grandeur définie comme l'inverse de la résistance. Elle est généralement notée $G$ et exprimée en Siemens (S).
+
