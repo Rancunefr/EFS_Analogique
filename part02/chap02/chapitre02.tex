@@ -1,12 +1,12 @@
-\chapter{Charge d'un condensateur}
+\chapter{Décharge d'un condensateur}
 
-Afin d'étudier la charge d'un condensateur, on utilise le montage suivant :
+Afin d'étudier la décharge d'un condensateur, on utilise le montage suivant :
 
 \begin{center}
-\includesvg{part02/chap01/charge_c}
+\includesvg{part02/chap02/decharge_c}
 \end{center}
 
-À l'instant $t=0$, la tension $U_{in}$ passe de 0V à $E_0$. \\
+À l'instant $t=0$, la tension $U_{in}$ passe de $E_0$ à $0V$ \\
 
 La loi des mailles donne :
 
@@ -19,13 +19,13 @@ $$ I = C \, \dfrac{d\,U_C}{dt} $$
 
 Ce qui permet d'établir l'équation différentielle suivante pour $t>0$~:
 
-$$ RC\,\dfrac{dU_C}{dt} + U_C = E_0 $$ \\
+$$ RC\,\dfrac{dU_C}{dt} + U_C = 0 $$ \\
 
 On introduit dans cette expression la constante de temps $\tau = RC$
 
 La solution de l'équation différentielle (en tenant compte des conditions aux limites) est alors~:
 
-$$ U_C(t) = E_0\,(\,1 - e^{-t/\tau}\,) $$
+$$ U_C(t) = E_0\,e^{-t/\tau} $$
 
 \begin{figure}[!h]
 \begin{minipage}{13cm}
@@ -50,8 +50,8 @@ R = 2000
 C = 400e-6
 Tau = R*C
 E = 8
-step(x) = x>0 ? E : 0
-reponse(x) = x<0 ? 0 : E*(1-exp(-x/Tau)) 
+step(x) = x>0 ? 0 : E
+reponse(x) = x<0 ? E : E*exp(-x/Tau)
 plot step(x) w l lc 1 lw 3 t '$U_{in}$',\
 reponse(x) w l lc 2 lw 3 t '$U_C$'
 \end{gnuplot}
@@ -64,18 +64,18 @@ $C = 400 \, \mu F$ \\
 \bigskip
 $ \tau = 0.8\,s $ \\
 \end{minipage} \\
-	\caption{Charge d'un condensateur}
+	\caption{décharge d'un condensateur}
 \end{figure}
 
 \section*{Influence de la constante de temps}
 \smallskip
 \begin{itemize}
 
-\item Au bout d'un temps $3\tau$, la charge du condensateur est à $95\%$ de la valeur finale.
+\item Au bout d'un temps $3\tau$, la charge du condensateur est à $5\%$ de la valeur finale.
 
-$$ U(3\tau) = E_0\,(\,1-e^{-3}_,) = 0.95 \, E_0$$ \\
+$$ U(3\tau) = E_0\,e^{-3} = 0.05 \, E_0$$ \\
 
-\item La tangente à l'origine de la courbe coupe la valeur limite ($E_0$) en $t = \tau$
+\item La tangente à l'origine de la courbe coupe la valeur 0 en $t = \tau$
 
 \end{itemize}
 
