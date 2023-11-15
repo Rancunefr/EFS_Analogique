@@ -6,4 +6,60 @@ Afin d'étudier la charge d'un condensateur, on utilise le montage suivant :
 \includesvg{part02/chap01/charge_c}
 \end{center}
 
-À l'instant $t=0$, la tension $U_{in}$ passe de 0V à $E_0$.
+À l'instant $t=0$, la tension $U_{in}$ passe de 0V à $E_0$. \\
+
+La loi des mailles donne :
+
+$$U_{in} = U_R + U_C $$
+
+Avec pour la résistance et pour le condensateur :
+
+$$U_R = R\,I$$
+$$ I = C \, \dfrac{d\,U_C}{dt} $$
+
+Ce qui permet d'établir l'équation différentielle suivante pour $t>0$~:
+
+$$ RC\,\dfrac{dU_C}{dt} + U_C = E_0 $$ \\
+
+On introduit dans cette expression la constante de temps $\tau = RC$
+
+La solution de l'équation différentielle (en tenant compte des conditions aux limites) est alors~:
+
+$$ U_C(t) = E_0\,(\,1 - e^{-t/\tau}\,) $$
+
+
+\begin{minipage}{13cm}
+\begin{center}
+\begin{gnuplot}[terminal=epslatex, terminaloptions=color dashed]
+set key at 3,2 horizontal center
+set key width 2
+set key opaque
+set sample 1000
+set xzeroaxis
+set xtics axis 
+set ytics border nomirror
+set border 2
+set xr [-1:5]
+set yr [-1:10]
+set xlabel 't (s)'
+set ylabel 'Volts'
+set tmargin 1
+set rmargin 2
+R = 2000
+C = 400e-6
+Tau = R*C
+E = 8
+step(x) = x>0 ? E : 0
+reponse(x) = x<0 ? 0 : E*(1-exp(-x/Tau)) 
+plot step(x) w l lc 1 lw 3 t '$U_{in}$',\
+reponse(x) w l lc 2 lw 3 t '$U_C$'
+\end{gnuplot}
+\end{center}
+\end{minipage}
+\begin{minipage}{3cm}
+$E_0 = 8V$ \\
+$R = 2\,k\Omega$ \\
+$C = 400 \, \mu F$ \\
+\bigskip
+$ \tau = 0.8\,s $ \\
+\end{minipage}
