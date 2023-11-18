@@ -10,3 +10,10 @@
 *.out
 
 svg-inkscape/
+main-gnuplottex-fig1.eps
+main-gnuplottex-fig1.gnuplot
+main-gnuplottex-fig1.tex
+main-gnuplottex-fig2.eps
+main-gnuplottex-fig2.gnuplot
+main-gnuplottex-fig2.tex
+main.gnuploterrors
