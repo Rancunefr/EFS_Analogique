@@ -2,7 +2,6 @@
 *.lof
 *.log
 *.lot
-*.pdf
 *.toc
 *.idx
 *.ilg
@@ -10,10 +9,8 @@
 *.out
 
 svg-inkscape/
-main-gnuplottex-fig1.eps
-main-gnuplottex-fig1.gnuplot
-main-gnuplottex-fig1.tex
-main-gnuplottex-fig2.eps
-main-gnuplottex-fig2.gnuplot
-main-gnuplottex-fig2.tex
+main-gnuplottex-fig*.eps
+main-gnuplottex-fig*.gnuplot
+main-gnuplottex-fig*.tex
 main.gnuploterrors
+main-gnuplottex-fig*-eps-converted-to.pdf

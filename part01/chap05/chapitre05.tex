@@ -1,0 +1,329 @@
+\chapter{ Analyse temporelle }
+
+\section{Charge d'un condensateur}
+
+Afin d'étudier la charge d'un condensateur, on utilise le montage suivant :
+
+\begin{center}
+\includesvg{part01/chap05/charge_c}
+\end{center}
+
+À l'instant $t=0$, la tension $U_{in}$ passe de 0V à $E_0$. \\
+
+La loi des mailles donne :
+
+$$U_{in} = U_R + U_C $$
+
+Avec pour la résistance et pour le condensateur :
+
+$$U_R = R\,I$$
+$$ I = C \, \dfrac{d\,U_C}{dt} $$
+
+Ce qui permet d'établir l'équation différentielle suivante pour $t>0$~:
+
+$$ RC\,\dfrac{dU_C}{dt} + U_C = E_0 $$ \\
+
+On introduit dans cette expression la constante de temps $\tau = RC$
+
+La solution de l'équation différentielle (en tenant compte des conditions aux limites) est alors~:
+
+$$ U_C(t) = E_0\,(\,1 - e^{-t/\tau}\,) $$
+
+\begin{figure}[!h]
+\begin{minipage}{13cm}
+\begin{center}
+\begin{gnuplot}[terminal=epslatex, terminaloptions=color dashed]
+set key at 3,2 horizontal center
+set key width 2
+set key opaque
+set sample 1000
+set arrow from graph 0,1 to graph 0,1.05 size screen 0.025,15,60 filled ls -1
+set xzeroaxis linetype -1
+set xtics axis 
+set ytics border nomirror
+set border 2
+set xr [-1.5:5]
+set yr [-1:10]
+set xlabel 't (s)'
+set ylabel 'Volts'
+set tmargin 1
+set rmargin 2
+R = 2000
+C = 400e-6
+Tau = R*C
+E = 8
+step(x) = x>0 ? E : 0
+reponse(x) = x<0 ? 0 : E*(1-exp(-x/Tau)) 
+plot step(x) w l lc 1 lw 3 t '$U_{in}$',\
+reponse(x) w l lc 2 lw 3 t '$U_C$'
+\end{gnuplot}
+\end{center}
+\end{minipage}
+\begin{minipage}{3cm}
+$E_0 = 8V$ \\
+$R = 2\,k\Omega$ \\
+$C = 400 \, \mu F$ \\
+\bigskip
+$ \tau = 0.8\,s $ \\
+\end{minipage} \\
+	\caption{Charge d'un condensateur}
+\end{figure}
+
+\subsection*{Influence de la constante de temps}
+\smallskip
+\begin{itemize}
+
+\item Au bout d'un temps $3\tau$, la charge du condensateur est à $95\%$ de la valeur finale.
+
+$$ U(3\tau) = E_0\,(\,1-e^{-3}_,) = 0.95 \, E_0$$ \\
+
+\item Au bout d'un temps $5\tau$, la charge du condensateur est à $99.3\%$ de la valeur finale.
+
+$$ U(5\tau) = E_0\,(\,1-e^{-5}_,) = 0.993 \, E_0$$ \\
+
+
+\item La tangente à l'origine de la courbe coupe la valeur limite ($E_0$) en $t = \tau$
+
+\end{itemize}
+
+\pagebreak
+
+\section{Décharge d'un condensateur}
+
+Afin d'étudier la décharge d'un condensateur, on utilise le montage suivant :
+\begin{center}
+\includesvg{part01/chap05/decharge_c}
+\end{center}
+À l'instant $t=0$, la tension $U_{in}$ passe de $E_0$ à $0V$. La loi des mailles donne :
+\begin{center}
+$U_{in} = U_R + U_C$ avec $U_R = R\,I$ et $ I = C \, \dfrac{d\,U_C}{dt} $
+\end{center}
+Ce qui permet d'établir l'équation différentielle suivante pour $t>0$~:
+$$ RC\,\dfrac{dU_C}{dt} + U_C = 0 $$ 
+En posant $\tau = RC$, la solution de l'équation différentielle est alors~: $ U_C(t) = E_0\,e^{-t/\tau} $
+
+\begin{figure}[!h]
+\begin{minipage}{13cm}
+\begin{center}
+\begin{gnuplot}[terminal=epslatex, terminaloptions=color dashed]
+set key at 3,2 horizontal center
+set key width 2
+set key opaque
+set sample 1000
+set arrow from graph 0,1 to graph 0,1.05 size screen 0.025,15,60 filled ls -1
+set xzeroaxis linetype -1
+set xtics axis 
+set ytics border nomirror
+set border 2
+set xr [-1.5:5]
+set yr [-1:10]
+set xlabel 't (s)'
+set ylabel 'Volts'
+set tmargin 1
+set rmargin 2
+R = 2000
+C = 400e-6
+Tau = R*C
+E = 8
+step(x) = x>0 ? 0 : E
+reponse(x) = x<0 ? E : E*exp(-x/Tau)
+plot step(x) w l lc 1 lw 3 t '$U_{in}$',\
+reponse(x) w l lc 2 lw 3 t '$U_C$'
+\end{gnuplot}
+\end{center}
+\end{minipage}
+\begin{minipage}{3cm}
+$E_0 = 8V$ \\
+$R = 2\,k\Omega$ \\
+$C = 400 \, \mu F$ \\
+\bigskip
+$ \tau = 0.8\,s $ \\
+\end{minipage} \\
+	\caption{décharge d'un condensateur}
+\end{figure}
+
+\subsection*{Influence de la constante de temps}
+\smallskip
+\begin{itemize}
+
+\item Au bout d'un temps $3\tau$, la charge du condensateur est à $5\%$ de la valeur initiale.
+
+$$ U(3\tau) = E_0\,e^{-3} = 0.05 \, E_0$$ \\
+
+\item Au bout d'un temps $5\tau$, la charge du condensateur est à $0.6\%$ de la valeur initiale.
+
+$$ U(5\tau) = E_0\,e^{-5} = 0.006 \, E_0$$ \\
+
+\item La tangente à l'origine de la courbe coupe la valeur 0 en $t = \tau$
+
+\end{itemize}
+
+\section{Établissement du courant dans une inductance}
+
+On considère le schéma suivant :
+
+\begin{center}
+\includesvg{part01/chap05/echelon_l}
+\end{center}
+
+À l'instant $t=0$, la tension $U_{in}$ passe de 0V à $E_0$. \\
+
+La loi des mailles donne :
+
+$$U_{in} = U_R + U_L $$
+
+Avec pour la résistance et pour le condensateur :
+
+$$U_R = R\,I$$
+$$ U_L = L \, \dfrac{d\,I}{dt} $$
+
+Ce qui permet d'établir l'équation différentielle suivante pour $t>0$~:
+
+$$ R\,I + L\,\dfrac{d\,I}{dt}   = E_0 $$ \\
+
+On introduit dans cette expression la constante de temps $\tau = \dfrac{L}{R}$~:
+
+$$ I + \dfrac{L}{R}\dfrac{d\,I}{dt}   = \dfrac{E_0}{R} $$ \\
+
+Pour $t>0$, la solution de cette équation différentielle est~:
+
+$$ I(t) = \dfrac{E_0}{R}\,(\,1 - e^{-t/\tau}\,) $$
+
+Ce qui correspond à la tension $U_L$ suivante :
+
+$$ U_L(t) = L \dfrac{d\,I}{d\,t} = E_0 \, e^{-t/\tau}\ $$
+
+
+\begin{figure}[!h]
+	\begin{center}
+	\begin{gnuplot}[terminal=epslatex, terminaloptions={color dashed}]
+set key horizontal outside bottom
+set key width 2
+set key opaque
+set sample 1000
+set arrow from graph 0,1 to graph 0,1.05 size screen 0.025,15,60 filled ls -1
+set arrow from graph 1,1 to graph 1,1.05 size screen 0.025,15,60 filled ls -1
+set xzeroaxis linetype -1
+set xtics axis 
+set ytics  border nomirror
+set y2tics border nomirror
+set border 10
+set xr [-0.5:5.9]
+set link y2 via y/10 inverse y*10
+set yr [-1:10]
+set xlabel 't (s)'
+set ylabel 'Volts'
+set y2label 'Ampères'
+set tmargin 1
+set rmargin 2
+R = 8
+L = 10
+Tau = L/R
+E = 8
+step(x) = x>0 ? E : 0
+tension(x) = x<0 ? 0 : E*exp(-x/Tau)
+courant(x) = x<0 ? 0 : E/R*(1-exp(-x/Tau)) 
+plot step(x) w l lc 1 lw 3 t '$U_{in}$',\
+tension(x) w l lc 2 lw 3 t '$U_L$',\
+courant(x) w l lc 3 lw 3 t '$I_L$' axis x1y2
+\end{gnuplot} 
+\begin{minipage}{\textwidth}
+\bigskip
+\begin{center}
+$E_0 = 8V \quad R = 8\,\Omega \quad L = 10\,H \quad \tau = 1.25\,s $ 
+\end{center}
+\end{minipage}
+\end{center}
+\caption{Etablissement du courant dans un circuit RL}
+\end{figure}
+
+Les équations différentielles étant les mêmes, les remarques concernant la constante de temps $\tau$ effectuées dans les chapitres précédants restent valides. \\
+
+
+\section{Rupture du courant dans une inductance}
+
+On considère le schéma suivant :
+
+\begin{center}
+\includesvg{part01/chap05/echelon2_l}
+\end{center}
+
+À l'instant $t=0$, la tension $U_{in}$ passe de $E_0$ à $0V$. \\
+
+La loi des mailles donne :
+
+$$U_{in} = U_R + U_L $$
+
+Avec pour la résistance et pour le condensateur :
+
+$$U_R = R\,I$$
+$$ U_L = L \, \dfrac{d\,I}{dt} $$ \\
+
+Ce qui permet d'établir l'équation différentielle suivante pour $t>0$~:
+
+$$ R\,I + L\,\dfrac{d\,I}{dt}   = 0 $$ 
+
+On introduit dans cette expression la constante de temps $\tau = \dfrac{L}{R}$~:
+
+$$ I + \dfrac{L}{R}\dfrac{d\,I}{dt}   = 0 $$ \\
+
+Pour $t>0$, la solution de cette équation différentielle est~:
+
+$$ I(t) = \dfrac{E_0}{R}\,e^{-t/\tau} $$  
+
+\pagebreak
+
+Ce qui correspond à la tension $U_L$ suivante :
+
+$$ U_L(t) = L \dfrac{d\,I}{d\,t} = - E_0 \, e^{-t/\tau}\ $$
+
+\begin{figure}[!h]
+	\begin{center}
+	\begin{gnuplot}[terminal=epslatex, terminaloptions={color dashed}]
+set key horizontal outside bottom
+set key width 2
+set key opaque
+set sample 1000
+set arrow from graph 0,1 to graph 0,1.05 size screen 0.025,15,60 filled ls -1
+set arrow from graph 1,1 to graph 1,1.05 size screen 0.025,15,60 filled ls -1
+set xzeroaxis linetype -1
+set xtics axis 
+set ytics  border nomirror
+set y2tics border nomirror
+set border 10
+set xr [-0.5:5.9]
+set link y2 via y/10 inverse y*10
+set yr [-10:10]
+set xlabel 't (s)'
+set ylabel 'Volts'
+set y2label 'Ampères'
+set tmargin 1
+set rmargin 2
+R = 8
+L = 10
+Tau = L/R
+E = 8
+step(x) = x>0 ? 0 : E
+tension(x) = x<0 ? 0 : -E*exp(-x/Tau)
+courant(x) = x<0 ? E/R : E/R*exp(-x/Tau)
+plot step(x) w l lc 1 lw 3 t '$U_{in}$',\
+tension(x) w l lc 2 lw 3 t '$U_L$',\
+courant(x) w l lc 3 lw 3 t '$I_L$' axis x1y2
+\end{gnuplot} 
+\begin{minipage}{\textwidth}
+\bigskip
+\begin{center}
+$E_0 = 8V \quad R = 8\,\Omega \quad L = 10\,H \quad \tau = 1.25\,s $ 
+\end{center}
+\end{minipage}
+\end{center}
+\caption{Rupture du courant dans un circuit RL}
+\end{figure}
+
+Les équations différentielles étant les mêmes, les remarques concernant la constante de temps $\tau$ effectuées dans les chapitres précédants restent valides. \\
+
+\subsection*{Note:}
+
+Dans le cas présenté ci-dessus, le courant n'est pas brutalement interrompu. Considérer $U_{in} = 0V$ signifie que l'on court-circuite l'alimentation, et donc qu'un chemin est disponible pour qu'un courant puisse s'établir. \\
+
+Lorsque ce n'est pas le cas (ouverture du circuit), le courant passe brutalement de $E_0 / R$ à $0$. Sa dérivée en $t=0$ est donc très grande (théoriquement infinie). La tension aux bornes de l'inductance peut alors s'avérer très (voir trop) importante.  Nous verrons dans les chapitres suivants que cela justifie l'usage d'une diode de roue libre.\\
