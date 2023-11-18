@@ -28,6 +28,8 @@ clean:
 	$(RM) *.idx
 	$(RM) *.ind
 	$(RM) -fr svg-inkscape
+	$(RM) main-gnuplottex*.*
+	$(RM) main.gnuploterrors
 
 
 FORCE:	
