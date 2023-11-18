@@ -2,7 +2,7 @@
 
 \section{Charge d'un condensateur}
 
-Afin d'étudier la charge d'un condensateur, on utilise le montage suivant :
+Afin d'étudier la charge d'un condensateur, on utilise le montage RC suivant :
 
 \begin{center}
 \includesvg{part01/chap05/charge_c}
@@ -90,7 +90,7 @@ $$ U(5\tau) = E_0\,(\,1-e^{-5}_,) = 0.993 \, E_0$$ \\
 
 \section{Décharge d'un condensateur}
 
-Afin d'étudier la décharge d'un condensateur, on utilise le montage suivant :
+Afin d'étudier la décharge d'un condensateur, on utilise le montage RC suivant :
 \begin{center}
 \includesvg{part01/chap05/decharge_c}
 \end{center}
@@ -160,7 +160,7 @@ $$ U(5\tau) = E_0\,e^{-5} = 0.006 \, E_0$$ \\
 
 \section{Établissement du courant dans une inductance}
 
-On considère le schéma suivant :
+On considère le schéma du circuit RL suivant :
 
 \begin{center}
 \includesvg{part01/chap05/echelon_l}
@@ -242,7 +242,7 @@ Les équations différentielles étant les mêmes, les remarques concernant la c
 
 \section{Rupture du courant dans une inductance}
 
-On considère le schéma suivant :
+On considère le circuit RL suivant :
 
 \begin{center}
 \includesvg{part01/chap05/echelon2_l}
@@ -327,3 +327,94 @@ Les équations différentielles étant les mêmes, les remarques concernant la c
 Dans le cas présenté ci-dessus, le courant n'est pas brutalement interrompu. Considérer $U_{in} = 0V$ signifie que l'on court-circuite l'alimentation, et donc qu'un chemin est disponible pour qu'un courant puisse s'établir. \\
 
 Lorsque ce n'est pas le cas (ouverture du circuit), le courant passe brutalement de $E_0 / R$ à $0$. Sa dérivée en $t=0$ est donc très grande (théoriquement infinie). La tension aux bornes de l'inductance peut alors s'avérer très (voir trop) importante.  Nous verrons dans les chapitres suivants que cela justifie l'usage d'une diode de roue libre.\\
+
+\section{Réponse à un échelon du circuit RLC série}
+
+On considère le circuit RLC suivant~:
+
+\begin{center}
+\includesvg{part01/chap05/echelon_RLC_Serie}
+\end{center}
+
+La loi des mailles donne la relation suivante :
+
+$$ U_{in} = U_R + U_L + U_C $$
+
+Avec pour la résistance, l'inductance et pour la capacité :
+
+$$ U_R = R\,I \quad U_L = L\,\dfrac{d\,I}{d\,t} \quad I = C \, \dfrac{d\,U_C}{d\,t}$$ 
+
+Pour $t>0$, on obtient l'équation différentielle suivante~:
+
+$$ LC\,\dfrac{d^{2}\,U_C}{d\,t^2} + RC\,\dfrac{d\,U_C}{d\,t} + U_C = E_0 $$
+
+On définit alors les constantes suivantes~:\\
+
+\begin{itemize}
+\item \textbf{La pulsation propre} ($\omega_0$)
+
+	$$ \omega_0 = \dfrac{1}{\sqrt{LC}} $$
+
+\item \textbf{Le coefficient d'amortissement} ($\lambda$)
+
+	$$ \lambda = \dfrac{R}{2\,L\,\omega_0} $$\\
+
+\end{itemize}
+
+L'équation du circuit devient alors~:
+
+$$ \dfrac{d^{2}\,U_C}{d\,t^2} + 2\,\lambda\,\omega_0\,\dfrac{d\,U_C}{d\,t} + \omega_0^2\,U_C = \omega_0^2\,E_0 $$\\
+
+On utilise la méthode de résolution d'une EDO d'ordre 2 présentée en annexe XX.
+
+\begin{enumerate}
+
+\item \textbf{Solution particulière~:} 
+	$$U_C(t) = constante = E_0$$ 
+
+\item \textbf{Solution de l'équation sans second membre~:}
+
+$$ \dfrac{d^{2}\,U_C}{d\,t^2} + 2\,\lambda\,\omega_0\,\dfrac{d\,U_C}{d\,t} + w_0^2\,U_C = 0 $$
+
+		Calcul du déterminant~: $\Delta = (2\lambda\omega_0)^2 - 4 * w_0^2 = 4\, \omega_0^2\,(\lambda^2 - 1 )$ 
+
+	Le signe de $\Delta $ dépend de $\lambda $. Il y a alors 3 cas possibles~:\\
+
+	\begin{itemize}
+		\item \textbf{Le régime apériodique~:} ($\Delta > 0 $) \\
+
+			Le polynôme caractéristique admet deux solutions~:
+			$$ r_1 = \dfrac{ -2\,\lambda\,\omega_0 - \sqrt{\Delta}}{ 2 } \quad et \quad	r_2 = \dfrac{ -2\,\lambda\,\omega_0 + \sqrt{\Delta}}{ 2 }  $$
+
+			et la solution de l'équation sans second membre est de la forme~:\\
+			\begin{center}
+				$U_C(t) = A\,e^{r_1\,t} + B\,e^{r_2\,t}$ (avec A et B deux constantes réelles)
+			\end{center}
+		\bigskip
+		\item \textbf{Le régime critique~:} ($\Delta = 0$)\\	
+
+			Le polynôme caractéristique admet une racine double et la solution de l'équation sans second membre est de la forme~:\\
+
+			\begin{center}
+			$U_C(t) = (\,A + B\,t\,)\,e^{ -w_0\,t} $ avec A et B deux constantes réelles. \\
+			\end{center}
+					
+		\bigskip
+		\item \textbf{Le régime pseudo-périodique~:} ($\Delta < 0 $)\\	
+
+			Le polynôme caractéristique admet deux solutions complexes conjuguées~:
+			$$ r_1 =  -\,\lambda\,\omega_0 - j\,\dfrac{\sqrt{|\Delta|}}{ 2 } \quad et \quad	r_2 = -\,\lambda\,\omega_0 + j\,\dfrac{\sqrt{|\Delta|}}{ 2 }  $$
+
+			et la solution de l'équation sans second membre est de la forme~:\\
+				$$U_C(t) = e^{-\dfrac{R}{2L}}\,(A\,cos(\omega_0\,t)\,+\,B\,sin(\omega_0\,t))$$
+
+				avec A et B deux constantes réelles.
+
+		\end{itemize}
+	\bigskip
+	\item \textbf{Ecriture de la solution générale~:}\\
+
+Pour obtenir la solution générale à l'équation du circuit, on ajoute la solution particulière et la solution de l'équation sans second membre. Les valeurs des constantes A et B sont obtenues par l'étude de la tension $U_C$ et du courant aux instants $t=0$ et $t=\infty$.
+
+\end{enumerate}
+
