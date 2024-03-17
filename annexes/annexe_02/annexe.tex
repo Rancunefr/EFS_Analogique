@@ -1,3 +1,227 @@
-\chapter{Résolution d'une EDO d'ordre 1}
+\chapter{Rappels de trigonométrie}
 
-%TODO
+\begin{center}
+\includesvg{annexes/annexe_02/cercle}
+\end{center}
+
+Le cercle trigonométrique est un cercle \textbf{\underline{unitaire}}. \\
+
+On peut donc voir que~: \\
+$$ -1 \leq cos(\theta) \leq 1 $$
+$$ -1 \leq sin(\theta) \leq 1 $$
+
+\pagebreak
+\section*{Valeurs remarquables}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\includesvg{annexes/annexe_02/cercle2}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\setlength{\tabulinesep}{2mm}
+	\begin{tabu} to 80mm {|X[c]|X[c]|X[c]|}
+	\hline
+	$\bm{\theta}$ & $\bm{cos(\theta)}$ & $\bm{sin(\theta)}$ \\ 
+	\hline
+	$0$ & $1$ & $0$ \\ 
+	\hline
+	$\dfrac{\pi}{6}$ & $\dfrac{\sqrt{3}}{2}$ & $\dfrac{1}{2}$ \\ 
+	\hline
+		$\dfrac{\pi}{4}$ & $\dfrac{\sqrt{2}}{2}$ & $\dfrac{\sqrt{2}}{2}$ \\ 
+	\hline
+		$\dfrac{\pi}{3}$ & $\dfrac{1}{2}$ & $\dfrac{\sqrt{3}}{2}$ \\ 
+	\hline
+	$\dfrac{\pi}{2}$ & $0$ & $1$ \\ 
+	\hline
+\end{tabu}
+\end{center}
+\end{minipage}
+\section*{Relations dans le cercle}
+
+\vfill
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\includesvg{annexes/annexe_02/cercle3}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{tabular}{l}
+	$cos(-\theta) = cos(\theta)$ \\
+	$sin(-\theta) = -sin(\theta)$ \\
+	\\
+	$cos(\pi-\theta) = -cos(\theta)$ \\
+	$sin(\pi-\theta) = sin(\theta)$ \\
+	\\
+	$cos(\pi+\theta) = -cos(\theta)$ \\
+	$sin(\pi+\theta) = -sin(\theta)$ \\
+\end{tabular}
+\end{minipage} 
+
+\vfill
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\hspace{0.5cm}\includesvg{annexes/annexe_02/cercle4}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\begin{tabular}{l}
+	$cos(\theta+\frac{\pi}{2}) = sin(\theta)$ \\
+	$sin(\theta+\frac{\pi}{2}) = -cos(\theta)$ \\
+	\\
+	$cos(\frac{\pi}{2}-\theta) = sin(\theta)$ \\
+	$sin(\frac{\pi}{2}-\theta) = cos(\theta)$ \\
+\end{tabular}
+\end{minipage}
+
+\pagebreak
+
+\section*{Formulaire}
+
+	\begin{tabular}{l}
+
+		$tan(a) = \dfrac{sin(a)}{cos(a)}$ \\
+		\\
+		$cos^2(a) + sin^2(a) = 1$ \\
+		\\
+		$cos(a+b) = cos(a)cos(b)-sin(a)sin(b)$ \\
+		$cos(a-b) = cos(a)cos(b)+sin(a)sin(b)$ \\
+		\\
+		$sin(a+b) = sin(a)cos(b)+cos(a)sin(b)$ \\
+		$sin(a-b) = sin(a)cos(b)-cos(a)sin(b)$ \\
+\end{tabular}
+
+\vfill
+
+\section*{Formule de Moivre}
+
+$$ (e^{i\theta})^n = e^{i\,n\,\theta} $$
+
+\section*{Formule d'Euler}
+
+\begin{center}
+	$$ cos(\theta) = \dfrac{e^{i\theta}+e^{-i\theta}}{2} $$
+	$$ sin(\theta) = \dfrac{e^{i\theta}-e^{-i\theta}}{2\,i} $$
+\end{center}
+
+\section*{Exemple de linéarisation}
+
+\begin{equation*}
+	\setlength{\jot}{10pt}
+	\begin{split}
+	cos^4(\theta) & = \left(\dfrac{e^{i\theta}+e^{-i\theta}}{2}\right)^4\\
+				  & = \dfrac{ e^{i4\theta} + 4e^{3i\theta}e^{-i\theta} + 6ei^{2i\theta}e^{-2i\theta} + 4e^{i\theta}e^{-3i\theta} + e^{-4i\theta}}{16} \\
+				  & = \dfrac{1}{8}\left(\dfrac{ e^{i4\theta} +  e^{-i4\theta}}{2}\right) +  \dfrac{4}{8}\left(\dfrac{e^{i2\theta}+e^{-i2\theta}}{2}\right) + \dfrac{6}{16}\\
+				  & = \dfrac{1}{8}\,cos(4\theta) + \dfrac{1}{2}\,cos(2\theta) + \dfrac{3}{8} \\
+	\end{split}
+\end{equation*}
+
+\vfill
+
+\pagebreak
+
+\section*{Courbes des fonctions Sinus et Cosinus}
+
+
+\begin{figure}[!h]
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\begin{gnuplot}[terminal=epslatex, terminaloptions={color dashed size 8cm,6cm} ]
+# Legend
+set key at 6.1,1.4
+# Axes ranges
+set xrange [-2*pi:2*pi]
+set yrange [-1.5:1.5]
+# Axes tics
+set xzeroaxis
+set yzeroaxis
+set xtics axis ('$-2\pi$' -2*pi,'$-\pi$' -pi,0,'$\pi$' pi,'$2\pi$' 2*pi)
+set ytics axis 1
+set tics scale 0.75
+set border 0
+# Line width of the axes
+set border linewidth 1.5
+# Line styles
+set style line 1 linecolor rgb '#0060ad' linetype 1 linewidth 3
+set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 3
+plot cos(x) title 'cos(x)' with lines linestyle 2
+\end{gnuplot}
+\end{center}
+\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+	La fonction $cos(x)$ est $2\pi$ périodique. \\
+
+	La fonction $cos(x)$ est \textbf{paire}. \\
+	
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\begin{gnuplot}[terminal=epslatex, terminaloptions={color dashed size 8cm,6cm} ]
+# Legend
+set key at 6.1,1.4
+# Axes ranges
+set xrange [-2*pi:2*pi]
+set yrange [-1.5:1.5]
+# Axes tics
+set xzeroaxis
+set yzeroaxis
+set xtics axis ('$-2\pi$' -2*pi,'$-\pi$' -pi,0,'$\pi$' pi,'$2\pi$' 2*pi)
+set ytics axis 1
+set tics scale 0.75
+set border 0
+# Line width of the axes
+set border linewidth 1.5
+# Line styles
+set style line 1 linecolor rgb '#0060ad' linetype 1 linewidth 3
+set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 3
+plot sin(x) title 'sin(x)' with lines linestyle 1
+\end{gnuplot}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	La fonction $sin(x)$ est $2\pi$ périodique. \\
+
+	La fonction $sin(x)$ est \textbf{impaire}. \\
+	
+	\end{minipage}
+
+\end{figure}
+
+\begin{figure}[!h]
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+	\begin{gnuplot}[terminal=epslatex, terminaloptions={color dashed size 8cm,6cm} ]
+# Legend
+set key at 6.1,1.4
+# Axes ranges
+set xrange [-2*pi:2*pi]
+set yrange [-1.5:1.5]
+# Axes tics
+set xzeroaxis
+set yzeroaxis
+set xtics axis ('$-2\pi$' -2*pi,'$-\pi$' -pi,0,'$\pi$' pi,'$2\pi$' 2*pi)
+set ytics axis 1
+set tics scale 0.75
+set border 0
+# Line width of the axes
+set border linewidth 1.5
+# Line styles
+set style line 1 linecolor rgb '#0060ad' linetype 1 linewidth 3
+set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 3
+set style line 3 linecolor rgb '#1fdd1f' linetype 1 linewidth 3
+plot tan(x) title 'tan(x)' with lines linestyle 3
+\end{gnuplot}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	La fonction $tan(x)$ est $\pi$ périodique. \\
+
+	La fonction $tan(x)$ est \textbf{impaire}. \\
+	
+	\end{minipage}
+
+\end{figure}
