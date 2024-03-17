@@ -1,0 +1,82 @@
+\chapter{Rappels sur la dérivation}
+
+\begin{minipage}{0.5\textwidth}
+\includesvg{annexes/annexe_03/derivation}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+
+\textbf{Définition:} \\
+
+La dérivée de la fonction $f$ au point $x_0$ est définie par la limite suivante (si elle existe)~:
+
+$$f'(x_0) = \lim\limits_{\substack{h \rightarrow 0 \\ h \neq 0}} \left( \dfrac{ f(x_0+h) - f(x_0) }{h} \right) $$ \\
+
+\textbf{Interprétation géomètrique~:}\\
+
+Lorsque $h$ tend vers $0$, la droite $\mathcal{D}$ tend vers la tangente à $f$ en $x_0$. \\
+
+La dérivée correspond au coefficient directeur de la tangente à $f$ au point d'abscisse $x_0$.
+
+\end{minipage}
+
+\section*{Notation~:}
+
+Il existe différentes notations pour la dérivée de $f$ en un point $x_0$~: \\
+
+\begin{itemize}
+\item La notation de Lagrange~: $f'(x_0)$ \\
+
+\item La notation de Leibnitz~: $\odv{f}{x}(x_0)$ ou $\odv{f}{x}_{x_0}$  \\
+
+\item La notation de Newton~: $\dot{f}(x_0)$. \\
+\end{itemize}
+
+La notation de Newton est plutôt utilisée en physique pour dériver par rapport au temps.\\
+
+\pagebreak
+
+\section*{Règles de dérivation}
+
+\begin{center}
+	\setlength{\tabulinesep}{2mm}
+	\begin{tabu} to 160mm {|X[c]|X[c]|}
+	\hline
+	\textbf{Règle} & \textbf{Conditions} \\ 
+	\hline
+	$(\lambda u)' = \lambda u'$ & $\lambda$ un nombre réel \\
+	$(u\,v)' = u'\,v+u\,v'$ &  \\
+	$\left(\dfrac{u}{v}\right)' = \dfrac{u'\,v-u\,v'}{v^2}$ &  $v$ dérivable et qui ne s'annule pas.\\
+	$( u \circ v )' = u' \circ v \times v'$ & \\
+	$( u^{-1})' = \dfrac{1}{u' \circ u^{-1}}$ & $u$ bijective, dérivable et ne s'annulant pas.\\
+	\hline
+\end{tabu}
+\end{center}
+
+\section*{Dérivées usuelles}
+
+\begin{center}
+	\setlength{\tabulinesep}{2mm}
+	\begin{tabu} to 160mm {|X[c]|X[c]|X[c]|}
+	\hline
+	\textbf{Fonction $f(x)$} & \textbf{Dérivée $f'(x)$} & \textbf{Remarque} \\ 
+	\hline
+	$k$ & $0$ & $k$ constante réelle\\
+	$k\,x$ & $k$ & $k$ constante réelle\\
+	$x^n$ & $nx^{n-1}$& $n$ entier ou réel\\
+	$\dfrac{1}{x}$ &$\dfrac{-1}{x^2}$ & \\
+	$\sqrt{x}$ &$\dfrac{1}{2\sqrt{x}}$ & \\
+	$e^x$ & $e^x$ & \\
+	$cos(x)$ & $-sin(x)$ & \\
+	$sin(x)$ & $cos(x)$ & \\
+	$ln(x)$ & $\dfrac{1}{x}$ & \\
+	\hline
+\end{tabu}
+\end{center}
+
+
+\section*{Dérivées partielles~:}
+
+La notion de dérivée s'étend au cas des fonctions multivariables. On la note alors~:
+
+$$\pdv{f}{x_i}_{a} = \lim\limits_{h \rightarrow 0}{\dfrac{f(a_0,\dots,a_{i}+h,\dots,a_n)-f(a_0,\dots,a_i,\dots,a_n)}{h}}$$
+
