@@ -1,7 +1,9 @@
 \documentclass[a4paper]{book}
 \usepackage[a4paper,margin=2cm]{geometry}
 \usepackage{lipsum}
-\usepackage{tabu}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
 
 % Redéfinition de la commande \chapter
 \makeatletter
@@ -9,37 +11,88 @@
 \def\nompart{Le nom de la partie}
 \def\nomfiche{Le nom de la fifiche}
 
+\newcounter{numfiche}
+\newcounter{numpart}
+
+\def\thesection{\arabic{section}}
+
+\renewcommand\tabularxcolumn[1]{m{#1}}
+
 \newcommand{\partie}[1]{%
-	\def\nompart{#1}
-	\part{#1}
-    }%
+\def\nompart{#1}
+\stepcounter{numpart}
+\part{#1}
+}%
+	
 \newcommand{\fiche}[1]{%
 \def\nomfiche{#1}
+\stepcounter{numfiche}
+\setcounter{section}{0}
 \newpage
-{\setlength{\parindent}{0pt}
-\begin{minipage}{\textwidth}
-\setlength{\tabulinesep}{2mm}
-\begin{tabu} to \textwidth {|X[l,6]|X[c,1]|}
-\hline
-\textbf{\nompart} & Fiche 01 \tabularnewline
-\hline
-\multicolumn{2}{|l|}{ \huge \textbf{ \nomfiche }} \tabularnewline
-\hline
-\end{tabu}
-\end{minipage}}
+{
+	\thispagestyle{empty}
+	\hskip-6mm
+	\begin{minipage}{\textwidth}
+		\begin{minipage}[b][1.7cm][c]{1.7cm}
+			\includegraphics[width=1.7cm]{logo}
+		\end{minipage}
+		\quad
+		\begin{minipage}[t]{11cm}
+			\vspace{-15mm}
+			\large\sffamily%
+				\nompart\\
+				\huge{#1}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{2cm}
+			%\vspace*{-4\baselineskip}
+			\vspace{-15mm}
+			\begin{flushright}
+				\large{\textsf{ \textbf{Fiche \Alph{numpart}.\arabic{numfiche}} }}
+			\end{flushright}
+		\end{minipage}
+	\end{minipage}
+	\vskip6mm
+}
 }%
 
 \makeatother
 
+\usepackage{lastpage}
+\pagestyle{plain}	
+\fancypagestyle{empty}{				% Redéfinir le style plain
+	\fancyhf{} 						% Enlever tout
+	\fancyfoot[LE]{					% Infos discrètes en bas à droite
+		{\scriptsize page \thepage }
+	}									
+	\fancyfoot[RE]{					% Infos discrètes en bas à droite
+		{\scriptsize https://www.rancune.org}
+	}									
+	\fancyfoot[RO]{					% Infos discrètes en bas à droite
+		{\scriptsize page \thepage }
+	}									
+	\fancyfoot[LO]{					% Infos discrètes en bas à droite
+		{\scriptsize https://www.rancune.org}
+	}									
+	\renewcommand{\headrulewidth}{0pt} % pas de ligne en entête
+}
+
 \begin{document}
+
 \pagestyle{empty}
-\partie{test de chapitre}
+
+\partie{Electronique linéaire}
 
 \fiche{Les circuits RC}
 \section{coucou}
 \lipsum[1-3]
 \section{coucou22}
+\lipsum[1-3]
 
+\fiche{Les transistors bipolaires}
+\section{coucou}
+\lipsum[1-3]
+\section{coucou22}
 Le nom de la fifiche est "\nompart{}" \\
 
 \end{document}
