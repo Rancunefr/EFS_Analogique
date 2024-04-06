@@ -774,4 +774,27 @@ plot \
 
 \section{Réponse à un échelon de courant (RLC parallèle)}
 
+On considère le circuit RLC parallèle suivant~:
+
+\begin{center}
+\includesvg{part01/chap05/echelon_RLC_Parallele}
+\end{center}
+
+La loi des mailles nous donne~:
+
+$$ I = I_R + I_L + I_C $$
+
+Avec pour la résistance, l'inductance et pour la capacité :
+
+$$ U = R\,I_R \quad U = L\,\dfrac{d\,I_L}{d\,t} \quad I_C = C \, \dfrac{d\,U}{d\,t}$$  \\
+
+
+Pour $t>0$, on obtient l'équation différentielle suivante~:
+
+$$ \dfrac{d\,I}{d\,t} =  C\,\dfrac{d^2\,U}{d\,t^2} + \dfrac{1}{R} \dfrac{d\,U}{d\,t} +  \dfrac{1}{L}\,U $$ \\
+
+On retrouve ici une EDO d'ordre deux, tout à fait similaire à celle obtenue pour le circuit RLC série étudié dans la section précédente. \\
+
+Ce circuit porte le nom de "\textbf{circuit bouchon}" car il est couramment utilisé en bout de ligne de transmission. Nous y reviendrons un peu plus tard. \\
+
 
