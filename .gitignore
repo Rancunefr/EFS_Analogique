@@ -7,7 +7,7 @@
 *.ilg
 *.ind
 *.out
-
+*~
 svg-inkscape/
 main-gnuplottex-fig*.eps
 main-gnuplottex-fig*.gnuplot
