@@ -1,4 +1,4 @@
-TEX= pdflatex -shell-escape
+TEX= pdflatex -shell-escape 
 RM= rm -f
 INDEX= makeindex
 
