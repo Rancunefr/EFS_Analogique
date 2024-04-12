@@ -1,26 +1,41 @@
 \chapter{Analyse harmonique}
+
+\begin{minipage}{0.8\textwidth}
+	\textbf{Signal, m} \textit{Phénomène physique dont la présence, l'absence ou les variations sont considérées comme représentant des informations.}\\
+
+	\textit{Le phénomène physique peut être, par exemple, une onde électromagnétique ou une onde acoustique, et les variations peuvent être, par exemple, celles d’un champ électrique, d’une tension électrique ou d’une pression acoustique.} \\ 
+
+	\hspace*{0pt}\hfill Définition de l'IEC (IEV 171-01-03)
+\end{minipage}
+
 \section{Introduction}
 
-Nous avons vu jusque là comment calculer les réponses d'un circuit linéaire à un signal quelconque. Cependant, ce calcul implique la résolution d'équations différentielles, ce qui n'est pas possible lorsque le signal d'entrée n'est pas un signal simple. \\
+Nous avons vu jusque là comment calculer les réponses d'un circuit linéaire à un signal quelconque. Cependant, ce calcul implique la résolution d'équations différentielles, ce qui n'est pas possible lorsque le signal d'entrée n'est pas un signal dont on connait l'expression mathématique. \\
 
-Prenons l'exemple d'un filtre audio. Le signal d'entrée est une tension représentant le son (musique, voix, etc.) que nous désirons filtrer. Il serait difficile de trouver l'équation temporelle d'un tel signal, et donc nous ne pouvons pas utiliser cette approche. 
+Prenons l'exemple d'un filtre audio. Le signal d'entrée est une tension représentant le son (musique, voix, etc.) que nous désirons filtrer. Il serait difficile de trouver l'équation temporelle d'un tel signal, et donc nous ne pouvons pas utiliser cette approche. \\
 
+\begin{figure}[!h]
 \begin{center}
 \includegraphics{part01/chap06/intro01.png}
 \end{center}
+	\caption{ Cas des signaux non analytiques}
+\end{figure}
 
-C'est ici qu'intervient la transformée de Fourier. Au lieu de travailler directement sur le signal d'entrée, la transformée de Fourier nous dit que tout signal peut être décomposé comme une somme de signaux "élémentaires" sinusoïdaux. Notre approche peut donc être simplifiée : au lieu de calculer la réponse d'un circuit à un signal complexe, nous allons décomposer ce signal en une somme de sinusoïdes, puis étudier comment le filtre altère chacune d'entre elles. 
+C'est ici qu'intervient la transformée de Fourier. Au lieu de travailler directement sur le signal d'entrée, la transformation de Fourier nous dit que tout signal peut être décomposé comme une somme de signaux "élémentaires" sinusoïdaux. Notre approche peut donc être simplifiée : au lieu de calculer directement la réponse d'un circuit à un signal temporel, nous allons décomposer ce signal en une somme de sinusoïdes, puis étudier comment le filtre altère chacune d'entre elles. \\
 
+\begin{figure}[!h]
 \begin{center}
 \includesvg{part01/chap06/intro02}
 \end{center}
+	\caption{Principe de l'analyse harmonique}
+\end{figure}
 
 Nous pourrons alors reconstruire la réponse en sommant les réponses élémentaires. 
 
-\pagebreak
 \section{Les séries de Fourier}
 
 \subsection*{Définition}
+\addcontentsline{toc}{subsection}{Définition}
 
 Les séries de Fourier s'appliquent aux \textbf{\underline{fonctions périodiques}}. \\
 
@@ -54,6 +69,7 @@ $$ a_n\,cos\left( n\omega t \right) + b_n\,sin\left( n\omega t\right) $$
 \end{itemize}
 
 \subsection*{Parité}
+\addcontentsline{toc}{subsection}{Parité}
 
 \begin{itemize}
 \item Si la fonction s(t) est paire, tous les coefficients $b_n$ s'annulent :
@@ -67,6 +83,7 @@ $$ s(t) = \sum_{n=1}^{\infty} \left(b_nsin\left(n \omega t\right) \right) $$
 \end{itemize}
 
 \subsection*{Forme phase-amplitude~:}
+\addcontentsline{toc}{subsection}{Forme phase-amplitude}
 
 Le terme général $a_n cos( n \omega t ) + b_n sin( n \omega t )$ peut être réécrit sous la forme : 
 
@@ -91,6 +108,7 @@ Cette écriture, par rapport à la précédente, présente l'intérêt de repré
 \textbf{\underline{Note}}~: Le lecteur attentif aura remarqué une correspondance entre les coordonnées $(a_n,b_n)$, qui correspondent aux coodonnées cartésiennes d'un vecteur 2D, et les coordonnées $(c_n, \phi_n)$ qui correspondent aux coordonnées polaires de ce même vecteur. Nous allons continuer, dans les chapitres à venir, à exploiter cette correspondance entre signal sinusoïdal et vecteur (ou nombre complexe).
 
 \subsection*{Forme exponentielle}
+\addcontentsline{toc}{subsection}{Forme exponentielle}
 
 Une troisième forme existe pour les séries de Fourier. Il s'agit de la forme exponentielle qui s'écrit de la façon suivante~:
 
@@ -110,7 +128,8 @@ $$ d_n = \dfrac{1}{T} \int_{0}^{T} s(t)\,e^{ j\,n\,\omega\,t }\,dt \quad  \text{
 \end{cases}
 $$  
 
-\subsection*{ Spectre en fréquence }
+\subsection*{Spectre en fréquence }
+\addcontentsline{toc}{subsection}{Spectre en fréquence}
 
 Le spectre en fréquence d'un signal $s(t)$ est obtenu en représentant les coefficients $a_n$, $b_n$ ou $c_n$ par rapport aux pulsations correspondantes~: \\
 
@@ -251,6 +270,7 @@ plot \
 \end{figure}
 
 \subsection*{Phénomène de Gibbs}
+\addcontentsline{toc}{subsection}{Phénomène de Gibbs}
 \begin{minipage}{0.4\textwidth}
 \includegraphics[width=\textwidth]{part01/chap06/gibbs.png}
 \end{minipage}
@@ -266,49 +286,259 @@ Lorsqu'un grand nombre d'harmoniques est pris en compte, cette erreur d'approxim
 La transformation de Fourier est une généralisation aux \textbf{\underline{fonctions non périodiques}} des séries de Fourier.
 
 \subsection*{Définition}
+\addcontentsline{toc}{subsection}{Définition}
 
 La transformation de Fourier est une opération qui associe à chaque fonction intégrable sur ${\rm I\!R}$ une autre fonction décrivant le spectre fréquentiel de celle-ci. \\
 
 Si elle existe, la transformée de Fourier de la fonction $f(t)$ s'écrit~:
 
-\begin{equation}
+\begin{equation*}
 	\begin{split}
 		\mathcal{F}(f): \, & \mathbb{R} \rightarrow  \mathbb{C}  \\	
 		& \xi \mapsto F(\xi)=\int_{-\infty}^{+\infty}f(t)\,e^{-j\,\xi\,t}\,dt \\
 	\end{split}
+\end{equation*}
+
+Cependant, cette écriture n'est pas unique et peut dépendre des conventions. Les physiciens notent souvent $\omega$ ou $2\pi\nu$ à la place de la variable complexe $\xi$ pour en faire les variables de pulsation ou de fréquence. L'équation précédente s'écrit alors ~: \\
+
+
+\begin{equation}
+	\begin{split}
+		\mathcal{F}(f): \, & \mathbb{R} \rightarrow  \mathbb{C}  \\	
+		& \nu \mapsto F(\nu)=\int_{-\infty}^{+\infty}f(t)\,e^{-j\,2\pi\nu\,t}\,dt \\
+	\end{split}
 \end{equation}
 
-$F(\xi)$ indique la "quantité" de fréquence $\xi$ présente dans le signal $f(t)$ sur l'intervalle de temps $]-\infty;+\infty[$. \\
+avec $\nu$ une fréquence en Hertz. \\
 
-Il y a une équivalence entre donner $f(t)$ et donner $F(\xi)$ : ce sont deux descriptions équivalentes du même signal~:\\
+$F(\nu)$ indique la "quantité" de fréquence $\nu$ présente dans le signal $f(t)$ sur l'intervalle de temps $]-\infty;+\infty[$. \\
+
+Il y a une équivalence entre donner $f(t)$ et donner $F(\nu)$ : ce sont deux descriptions équivalentes du même signal~:\\
 
 \begin{itemize}
 
-	\item L'une est \textbf{temporelle} \\
+	\item L'une est \textbf{temporelle} : $f(t)$ \\
 
-	\item L'autre est \textbf{fréquentielle} 
+	\item L'autre est \textbf{fréquentielle} $F(\nu)$ \\
 
 \end{itemize}
 
-\subsection*{Transformée de Fourier inverse }
+Cette notion est importante en electronique, car elle correspond à deux manières différentes d'analyser un circuit. Nous pouvons en effet nous intéresser aux phénomènes transitoires, et dans ce cas là l'approche temporelle est préférable. C'est par exemple ce que nous avons fait pour étudier la charge et la décharge d'un condensateur.
 
-% FIXME
+Mais nous pouvons aussi nous intéresser à ce qui se passse dans les différentes gammes de fréquence. Pour un ampli audio, par exemple, on cherche à savoir si les basses, par exemple, sont avantagées par rapport aux aigus. Dans ce cas là, une approche fréquentielle sera bien plus simple.
 
 \subsection*{Spectre continu}
+\addcontentsline{toc}{subsection}{Spectre continu}
 
-Le lecteur averti aura -je n'en doute pas- remarqué que la fonction $F(\xi)$ est à valeur complexe. Elle admet : \\
+Le lecteur averti aura -je n'en doute pas- remarqué que la fonction $F(\nu)$ est à valeur complexe. Elle admet : \\
 
 \begin{itemize}
 	\item \textbf{un spectre d'amplitude}~:  
 
-		$$A_\xi = \lvert F(\xi) \rvert $$ 
+		$$A_\xi = \lvert F(\nu) \rvert $$ 
 
 	\item \textbf{un spectre de phase}~: 
 
-		$$\phi(\xi) = arg(\,F(\xi)\,)$$ \\
+		$$\phi(\xi) = arg(\,F(\nu)\,)$$ \\
 
 \end{itemize}
 
 Ces spectres sont \underline{continus}, à la différence des spectres obtenus par les séries de Fourier qui étaient composés de raies calculées aux multiples de la fréquence fondamentale.
 
+\subsection*{Transformée de Fourier inverse }
+\addcontentsline{toc}{subsection}{Transformée de Fourier inverse}
 
+Si la fonction $F(\xi)$ est elle-même intégrable, il est possible de définir la réciproque de la transformation de Fourier, que l'on nomme "Transformation de Fourier inverse" et que l'on note $\mathcal{F}^{-1}$~:
+
+\begin{equation*}
+	f(t) = \mathcal{F}^{-1}(F)=\int_{-\infty}^{+\infty}F(\nu)\,e^{\,j2\pi\nu t}\,d\nu \\
+\end{equation*}
+
+Cette transformation inverse permet de repasser de la description fréquentielle à la description temporelle du signal. 
+
+\vfill
+\pagebreak
+\subsection*{Propriétés de la transformée de Fourier}
+\addcontentsline{toc}{subsection}{Propriétés de la transformée de Fourier}
+\bigskip
+\begin{itemize}
+\item \textbf{Linéarité} 
+
+\begin{equation}
+a\,f_1(t)\,+\,b\,f_2(t) \leftrightarrow a\,F_1(\nu) + b\,F_2(\nu) 
+\end{equation}
+
+\item \textbf{Décalage temporel} 
+
+\begin{equation}
+f(t+t_0) \leftrightarrow e^{j2\pi\nu t_0}F(\nu)
+\end{equation}
+
+\item \textbf{Décalage fréquentiel} 
+
+\begin{equation}
+	e^{j2\pi\nu_0t}f(t) \leftrightarrow F(\nu-\nu_0)
+\end{equation}
+
+\item \textbf{Changement d'échelle} 
+
+\begin{equation}
+f(a\,t) \leftrightarrow \dfrac{1}{\left| a \right|} F\left( \dfrac{\nu}{a}\right)
+\end{equation}
+
+\item \textbf{Dérivation\footnote{Attention, la TF et la TF Inverse ne sont pas toujours définies !}}
+
+\begin{equation}
+	\dfrac{d\,f}{d\,t} \leftrightarrow j2\pi\nu\,F(\nu)
+\end{equation}
+
+\item \textbf{Primitive\footnote{Idem.}}
+
+\begin{equation}
+\int f(t)\,dt \leftrightarrow \dfrac{1}{j2\pi\nu}F(\nu)
+\end{equation}
+
+\item \textbf{Produit}
+
+\begin{equation}
+	f(t) \, g(t) \leftrightarrow \left( F \ast G \right)(\nu)
+\end{equation}
+
+\item \textbf{Produit de convolution}
+
+\begin{equation}
+\left( f \ast g\right)(t) \leftrightarrow F(\nu) \, G(\nu)
+\end{equation}
+
+\item \textbf{Inversion temporelle}
+
+\begin{equation}
+	f(-t) \leftrightarrow F(-\nu)
+\end{equation}
+	
+\item \textbf{Conjuguaison complexe}
+	\begin{equation}
+		\overline{f}(t) \leftrightarrow \overline{F}(-\nu)
+	\end{equation}
+
+\pagebreak 
+\item \textbf{Symétries}\\
+\begin{itemize}
+\item \textbf{ Dans le cas de signaux réels } \\
+
+Si $f(t)$ est un signal réel~: $F(\nu) = F(-\nu)$ \\
+
+Le spectre d'amplitude est alors une fonction paire, et le spectre d'argument une fonction impaire. \\
+
+	\item \textbf{ Dans le cas de signaux imaginaires purs } \\
+	
+Si $f(t)$ est un signal imaginaire pur~: $F(\nu) = - F(-\nu)$ \\
+
+\end{itemize}
+
+\item{ \textbf{Parité}} \\
+
+Si $f(t)$ est un signal réel et pair, alors $F(\nu)$ est réelle et paire. 
+
+Si $f(t)$ est un signal réel et impair, alors $F(\nu)$ est imaginaire pure et impaire. 
+
+\end{itemize}
+
+\subsection*{Fourier et l'énergie des signaux}
+\addcontentsline{toc}{subsection}{Fourier et l'énergie des signaux}
+
+Lorsque les intégrales existent, on a~:
+
+\begin{equation}
+	\int^{+\infty}_{-\infty}\left|f(t)\right|^2\,dt = \int^{+\infty}_{-\infty} \left| F(\nu) \right| ^2 \, d\nu
+\end{equation} 
+
+\textbf{La transformée de Fourier conserve l'énergie du signal.} En conséquence, on peut définir une notion d'énergie par unité de fréquence, la \textbf{densité spectrale d'énergie (DSE)} du signal~:
+
+\begin{equation}
+	S_{xx}(\nu) = \left| F(\nu) \right|^2
+\end{equation}
+
+On peut alors définir \textbf{l'énergie dans une bande de fréquence} par l'intégrale de cette quantité sur une bande de fréquences~: \\
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\begin{center}
+\includesvg{part01/chap06/E_bandefreq}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{equation}
+E_{\Delta\nu} = \int^{\nu_0+\Delta\nu/2}_{\nu_0-\Delta\nu/2} S_{xx}(\nu)\,d\nu
+\end{equation}
+\end{minipage}
+\end{center}
+
+Et donc l'\textbf{énergie totale du signal} peut s'écrire~:
+
+\begin{equation}
+E = \int^{+\infty}_{-\infty} S_{xx}(\nu)\,d\nu
+\end{equation}
+
+\pagebreak
+
+\subsection*{Transformées de Fourier usuelles}
+\addcontentsline{toc}{subsection}{Transformée de Fourier usuelles}
+\bigskip
+\begingroup
+\setlength{\tabcolsep}{6pt} % Default value: 6pt
+\renewcommand{\arraystretch}{2} % Default value: 1
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Fonction} & \textbf{Représentation temporelle} & \textbf{Représentation fréquentielle} \\ 
+\hline
+\multirow{2}{*}{Constante} & $1$ & $\delta(\nu)$ \\
+& \includesvg{part01/chap06/tfgraph} 
+& \includesvg{part01/chap06/tfgraph}\\
+\hline
+\multirow{2}{*}{Sinus} & $sin(2\pi\nu_0t+\phi_0)$ & $\dfrac{1}{2j}\,(e^{j\phi_0}\,\delta(\nu-\nu_0) - e^{-j\phi_0}\,\delta(\nu+\nu_0))$ \\
+& \includesvg{part01/chap06/tfgraph} 
+& \includesvg{part01/chap06/tfgraph}\\
+\hline
+\multirow{2}{*}{Cosinus} & $cos(2\pi\nu_0t+\phi_0)$ & $\dfrac{1}{2}\,(e^{j\phi_0}\,\delta(\nu-\nu_0) + e^{-j\phi_0}\,\delta(\nu+\nu_0))$ \\
+& \includesvg{part01/chap06/tfgraph} 
+& \includesvg{part01/chap06/tfgraph}\\
+\hline
+\multirow{2}{*}{Sinus cardinal} & $sinc(t) = \dfrac{sin(t)}{t}$ & $ \Pi_{2\nu_0}(\nu) $ \\[2ex]
+& \includesvg{part01/chap06/tfgraph} 
+& \includesvg{part01/chap06/tfgraph}\\
+\hline
+\multirow{2}{*}{Dirac} & $\delta(t)$ & $1$ \\
+& \includesvg{part01/chap06/tfgraph} 
+& \includesvg{part01/chap06/tfgraph}\\
+\hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Fonction} & \textbf{Représentation temporelle} & \textbf{Représentation fréquentielle} \\ 
+\hline
+\multirow{2}{*}{Dirac décalé en $t_0$ } & $\delta(t)=\delta(t-t_0)$ & $e^{-j\,2\pi\nu t_0}$ \\
+& \includesvg{part01/chap06/tfgraph} 
+& \includesvg{part01/chap06/tfgraph}\\
+\hline
+\multirow{2}{*}{Exponentielle complexe} & $e^{j2\pi \nu_0 t}$ & $\delta(\nu-\nu_0)$ \\
+& \includesvg{part01/chap06/tfgraph} 
+& \includesvg{part01/chap06/tfgraph}\\
+\hline
+\multirow{2}{*}{Peigne de Dirac} & $\Sha_{T_e}(t)$ & $\Sha_{F_e}(\nu)$ \\
+& \includesvg{part01/chap06/tfgraph} 
+& \includesvg{part01/chap06/tfgraph}\\
+\hline
+\multirow{2}{*}{Fonction porte} & $\Pi_{T_0/2}$ & $ T_0\,sinc(\pi\nu T_0)$ \\
+& \includesvg{part01/chap06/tfgraph} 
+& \includesvg{part01/chap06/tfgraph}\\
+\hline
+\end{tabular}
+\end{center}
+
+\endgroup
