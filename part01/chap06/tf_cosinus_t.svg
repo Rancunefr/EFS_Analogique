@@ -23,20 +23,29 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="18.63"
-     inkscape:cx="75.013419"
-     inkscape:cy="50"
-     inkscape:window-width="3836"
-     inkscape:window-height="2097"
-     inkscape:window-x="0"
-     inkscape:window-y="31"
+     inkscape:cx="67.98175"
+     inkscape:cy="12.855609"
+     inkscape:window-width="1916"
+     inkscape:window-height="1034"
+     inkscape:window-x="1920"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg15" />
+     inkscape:current-layer="g4" />
   <title
      id="title1">Gnuplot</title>
   <desc
      id="desc1">Produced by GNUPLOT 5.4.10 patchlevel 9 (Gentoo revision r0) </desc>
   <g
      id="gnuplot_canvas">
+    <rect
+       style="fill:#c8c4b7;fill-opacity:0.22016;stroke:#1a1a1a;stroke-width:2"
+       id="rect15"
+       width="146.57854"
+       height="96.275169"
+       x="1.7107315"
+       y="1.8624153"
+       rx="6.9753823"
+       ry="6.9753823" />
     <rect
        x="0"
        y="0"
@@ -193,11 +202,11 @@
          d="M75.00,9.01 L66.00,9.01  "
          id="path2" />
       <g
-         transform="translate(58.22,12.91)"
+         transform="translate(58.22,14.91)"
          stroke="none"
-         fill="black"
+         fill="#000000"
          font-family="Arial"
-         font-size="12.00"
+         font-size="12px"
          text-anchor="end"
          id="g3">
         <text
@@ -326,13 +335,4 @@
        stroke-linejoin="miter"
        id="g15" />
   </g>
-  <rect
-     style="fill:#c8c4b7;fill-opacity:0.22016;stroke:#1a1a1a;stroke-width:2"
-     id="rect15"
-     width="146.57854"
-     height="96.275169"
-     x="1.7107315"
-     y="1.8624153"
-     rx="6.9753823"
-     ry="6.9753823" />
 </svg>

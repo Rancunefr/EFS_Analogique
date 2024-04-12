@@ -494,22 +494,22 @@ E = \int^{+\infty}_{-\infty} S_{xx}(\nu)\,d\nu
 \hline
 \multirow{2}{*}{Constante} & $1$ & $\delta(\nu)$ \\
 & \includesvg{part01/chap06/tf_constante_t} 
-& \includesvg{part01/chap06/tfgraph}\\
+& \includesvg{part01/chap06/tf_constante_f}\\ 
 \hline
-\multirow{2}{*}{Sinus} & $sin(2\pi\nu_0t+\phi_0)$ & $\dfrac{1}{2j}\,(e^{j\phi_0}\,\delta(\nu-\nu_0) - e^{-j\phi_0}\,\delta(\nu+\nu_0))$ \\
+\multirow{2}{*}{Sinus} & $sin(2\pi\nu_0t)$ & \multirow{2}{*}{$\dfrac{1}{2j}\,(\delta(\nu-\nu_0) - \delta(\nu+\nu_0))$} \\
 & \includesvg{part01/chap06/tf_sinus_t} 
-& \includesvg{part01/chap06/tfgraph}\\
+& \\
 \hline
-\multirow{2}{*}{Cosinus} & $cos(2\pi\nu_0t+\phi_0)$ & $\dfrac{1}{2}\,(e^{j\phi_0}\,\delta(\nu-\nu_0) + e^{-j\phi_0}\,\delta(\nu+\nu_0))$ \\
+\multirow{2}{*}{Cosinus} & $cos(2\pi\nu_0t)$ & $\dfrac{1}{2}\,(\delta(\nu-\nu_0) + \delta(\nu+\nu_0))$ \\
 & \includesvg{part01/chap06/tf_cosinus_t} 
-& \includesvg{part01/chap06/tfgraph}\\
+& \includesvg{part01/chap06/tf_cosinus_f}\\
 \hline
-\multirow{2}{*}{Sinus cardinal} & $sinc(t) = \dfrac{sin(t)}{t}$ & $ \Pi_{2\nu_0}(\nu) $ \\[2ex]
+\multirow{2}{*}{Sinus cardinal} & $2\,\nu_0 sinc(2\pi\nu_0t)$ & $ \Pi_{2\nu_0}(\nu) $ \\[2ex]
 & \includesvg{part01/chap06/tf_sinus_card_t} 
 & \includesvg{part01/chap06/tfgraph}\\
 \hline
 \multirow{2}{*}{Dirac} & $\delta(t)$ & $1$ \\
-& \includesvg{part01/chap06/tfgraph} 
+& \includesvg{part01/chap06/tf_dirac_t} 
 & \includesvg{part01/chap06/tf_dirac_f}\\
 \hline
 \end{tabular}
