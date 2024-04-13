@@ -11,7 +11,20 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs15" />
+     id="defs15">
+    <rect
+       x="17.595458"
+       y="13.187952"
+       width="90.051337"
+       height="18.856678"
+       id="rect2" />
+    <rect
+       x="17.595457"
+       y="13.187952"
+       width="90.051338"
+       height="18.856678"
+       id="rect2-3" />
+  </defs>
   <sodipodi:namedview
      id="namedview15"
      pagecolor="#ffffff"
@@ -22,21 +35,30 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="18.63"
-     inkscape:cx="75.013419"
-     inkscape:cy="50"
-     inkscape:window-width="3836"
-     inkscape:window-height="2097"
-     inkscape:window-x="0"
-     inkscape:window-y="31"
+     inkscape:zoom="6.5866997"
+     inkscape:cx="70.824544"
+     inkscape:cy="51.239622"
+     inkscape:window-width="1916"
+     inkscape:window-height="1034"
+     inkscape:window-x="1920"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg15" />
+     inkscape:current-layer="gnuplot_canvas" />
   <title
      id="title1">Gnuplot</title>
   <desc
      id="desc1">Produced by GNUPLOT 5.4.10 patchlevel 9 (Gentoo revision r0) </desc>
   <g
      id="gnuplot_canvas">
+    <rect
+       style="fill:#c8c4b7;fill-opacity:0.22016;stroke:#1a1a1a;stroke-width:2"
+       id="rect15"
+       width="146.57854"
+       height="96.275169"
+       x="1.7107315"
+       y="1.8624153"
+       rx="6.9753823"
+       ry="6.9753823" />
     <rect
        x="0"
        y="0"
@@ -192,19 +214,6 @@
          stroke="black"
          d="M75.00,19.94 L66.00,19.94  "
          id="path2" />
-      <g
-         transform="translate(66.61,23.84)"
-         stroke="none"
-         fill="black"
-         font-family="Arial"
-         font-size="12.00"
-         text-anchor="end"
-         id="g3">
-        <text
-           id="text2"><tspan
-             font-family="Arial"
-             id="tspan2">1</tspan></text>
-      </g>
     </g>
     <g
        fill="none"
@@ -266,6 +275,10 @@
          d="M75.00,91.00 L75.00,9.01  "
          id="path8" />
     </g>
+    <path
+       stroke="#000000"
+       d="m 107.13013,74.520176 v 9"
+       id="path2-7" />
     <g
        fill="none"
        color="black"
@@ -325,14 +338,21 @@
        stroke-linecap="butt"
        stroke-linejoin="miter"
        id="g15" />
+    <text
+       xml:space="preserve"
+       id="text1"
+       style="font-size:13.3333px;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans';white-space:pre;shape-inside:url(#rect2);display:inline;fill:#000000;stroke:#000000;stroke-width:0.6;stroke-dasharray:none"
+       transform="translate(22)"><tspan
+         x="17.595703"
+         y="25.001458"
+         id="tspan3">$2\nu_0$</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text1-6"
+       style="font-size:13.3333px;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans';white-space:pre;shape-inside:url(#rect2-3);display:inline;fill:#000000;stroke:#000000;stroke-width:0.6;stroke-dasharray:none"
+       transform="translate(92.693854,69.011411)"><tspan
+         x="17.595703"
+         y="25.001458"
+         id="tspan5">$T_0$</tspan></text>
   </g>
-  <rect
-     style="fill:#c8c4b7;fill-opacity:0.22016;stroke:#1a1a1a;stroke-width:2"
-     id="rect15"
-     width="146.57854"
-     height="96.275169"
-     x="1.7107315"
-     y="1.8624153"
-     rx="6.9753823"
-     ry="6.9753823" />
 </svg>
