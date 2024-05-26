@@ -1,13 +1,5 @@
 \chapter{Analyse harmonique}
 
-\begin{minipage}{0.8\textwidth}
-	\textbf{Signal, m} \textit{Phénomène physique dont la présence, l'absence ou les variations sont considérées comme représentant des informations.}\\
-
-	\textit{Le phénomène physique peut être, par exemple, une onde électromagnétique ou une onde acoustique, et les variations peuvent être, par exemple, celles d’un champ électrique, d’une tension électrique ou d’une pression acoustique.} \\ 
-
-	\hspace*{0pt}\hfill Définition de l'IEC (IEV 171-01-03)
-\end{minipage}
-
 \section{Introduction}
 
 Nous avons vu jusque là comment calculer les réponses d'un circuit linéaire à un signal quelconque. Cependant, ce calcul implique la résolution d'équations différentielles, ce qui n'est pas possible lorsque le signal d'entrée n'est pas un signal dont on connait l'expression mathématique. \\
@@ -16,7 +8,7 @@ Prenons l'exemple d'un filtre audio. Le signal d'entrée est une tension représ
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics{part01/chap07/intro01.png}
+\includegraphics{part02/chap07/intro01.png}
 \end{center}
 	\caption{ Cas des signaux non analytiques}
 \end{figure}
@@ -25,7 +17,7 @@ C'est ici qu'intervient la transformée de Fourier. Au lieu de travailler direct
 
 \begin{figure}[!h]
 \begin{center}
-\includesvg{part01/chap07/intro02}
+\includesvg{part02/chap07/intro02}
 \end{center}
 	\caption{Principe de l'analyse harmonique}
 \end{figure}
@@ -134,7 +126,7 @@ $$
 Le spectre en fréquence d'un signal $s(t)$ est obtenu en représentant les coefficients $a_n$, $b_n$ ou $c_n$ par rapport aux pulsations correspondantes~: \\
 
 \begin{center}
-\includesvg[scale=0.5]{part01/chap07/spectre_en_frequence}
+\includesvg[scale=0.5]{part02/chap07/spectre_en_frequence}
 \end{center}
 
 Cette représentation graphique permet de représenter la décomposition d'un signal en ses harmoniques et d'en comprendre les composantes. \\
@@ -144,7 +136,7 @@ Cette représentation graphique permet de représenter la décomposition d'un si
 On considère le signal carré de période $T$ et d'amplitude $E$ suivant~: 
 
 \begin{center}
-\includesvg{part01/chap07/signal_carre}
+\includesvg{part02/chap07/signal_carre}
 \end{center}
 
 Le signal est symétrique et centré verticalement. On a donc~:
@@ -159,7 +151,7 @@ La décomposition ne comprend donc que des harmoniques d'ordre impaire car le te
 
 \begin{minipage}{0.4\textwidth}
 \begin{center}
-\includesvg{part01/chap07/spectre_carre}
+\includesvg{part02/chap07/spectre_carre}
 \end{center}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
@@ -272,7 +264,7 @@ plot \
 \subsection*{Phénomène de Gibbs}
 \addcontentsline{toc}{subsection}{Phénomène de Gibbs}
 \begin{minipage}{0.4\textwidth}
-\includegraphics[width=\textwidth]{part01/chap07/gibbs.png}
+\includegraphics[width=\textwidth]{part02/chap07/gibbs.png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\textwidth}
@@ -463,7 +455,7 @@ On peut alors définir \textbf{l'énergie dans une bande de fréquence} par l'in
 \begin{center}
 \begin{minipage}{0.4\textwidth}
 \begin{center}
-\includesvg{part01/chap07/E_bandefreq}
+\includesvg{part02/chap07/E_bandefreq}
 \end{center}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
@@ -493,24 +485,24 @@ E = \int^{+\infty}_{-\infty} S_{xx}(\nu)\,d\nu
 \textbf{Fonction} & \textbf{Représentation temporelle} & \textbf{Représentation fréquentielle} \\ 
 \hline
 \multirow{2}{*}{Constante} & $1$ & $\delta(\nu)$ \\
-& \includesvg{part01/chap07/tf_constante_t} 
-& \includesvg{part01/chap07/tf_constante_f}\\ 
+& \includesvg{part02/chap07/tf_constante_t} 
+& \includesvg{part02/chap07/tf_constante_f}\\ 
 \hline
 \multirow{2}{*}{Sinus} & $sin(2\pi\nu_0t)$ & \multirow{2}{*}{$\dfrac{1}{2j}\,(\delta(\nu-\nu_0) - \delta(\nu+\nu_0))$} \\
-& \includesvg{part01/chap07/tf_sinus_t} 
+& \includesvg{part02/chap07/tf_sinus_t} 
 & \\
 \hline
 \multirow{2}{*}{Cosinus} & $cos(2\pi\nu_0t)$ & $\dfrac{1}{2}\,(\delta(\nu-\nu_0) + \delta(\nu+\nu_0))$ \\
-& \includesvg{part01/chap07/tf_cosinus_t} 
-& \includesvg{part01/chap07/tf_cosinus_f}\\
+& \includesvg{part02/chap07/tf_cosinus_t} 
+& \includesvg{part02/chap07/tf_cosinus_f}\\
 \hline
 	\multirow{2}{*}{Sinus cardinal} & $2\nu_0\,sinc(2\pi \nu_0 t)$ & $\Pi_{2\nu_0}\left(\nu\right) $ \\[2ex]
-& \includesvg{part01/chap07/tf_sinus_card_t} 
-& \includesvg{part01/chap07/tf_sinus_card_f}\\
+& \includesvg{part02/chap07/tf_sinus_card_t} 
+& \includesvg{part02/chap07/tf_sinus_card_f}\\
 \hline
 \multirow{2}{*}{Dirac} & $\delta(t)$ & $1$ \\
-& \includesvg{part01/chap07/tf_dirac_t} 
-& \includesvg{part01/chap07/tf_dirac_f}\\
+& \includesvg{part02/chap07/tf_dirac_t} 
+& \includesvg{part02/chap07/tf_dirac_f}\\
 \hline
 \end{tabular}
 \end{center}
@@ -523,18 +515,18 @@ E = \int^{+\infty}_{-\infty} S_{xx}(\nu)\,d\nu
 \textbf{Fonction} & \textbf{Représentation temporelle} & \textbf{Représentation fréquentielle} \\ 
 \hline
 	\multirow{2}{*}{Dirac décalé en $t_0$ } & $\delta(t)=\delta(t-t_0)$ & \multirow{2}{*}{$e^{-j\,2\pi\nu t_0}$} \\
-& \includesvg{part01/chap07/tf_dirac_decale_t} & \\
+& \includesvg{part02/chap07/tf_dirac_decale_t} & \\
 \hline
 	\multirow{2}{*}{Exponentielle complexe} & \multirow{2}{*}{$e^{j2\pi \nu_0 t}$} & $\delta(\nu-\nu_0)$ \\
-& & \includesvg{part01/chap07/tf_exponentielle_complexe_f}\\
+& & \includesvg{part02/chap07/tf_exponentielle_complexe_f}\\
 \hline
 	\multirow{2}{*}{Peigne de Dirac} & $\Sha_{T_e}(t)$ & $\dfrac{1}{T_e}\Sha_{F_e}(\nu)$ \\
-& \includesvg{part01/chap07/tf_peigne_dirac_t} 
-& \includesvg{part01/chap07/tf_peigne_dirac_f}\\
+& \includesvg{part02/chap07/tf_peigne_dirac_t} 
+& \includesvg{part02/chap07/tf_peigne_dirac_f}\\
 \hline
 \multirow{2}{*}{Fonction porte} & $\Pi_{T_0}$ & $ T_0\,sinc(\pi\nu T_0)$ \\
-& \includesvg{part01/chap07/tf_porte_t} 
-& \includesvg{part01/chap07/tf_porte_f}\\
+& \includesvg{part02/chap07/tf_porte_t} 
+& \includesvg{part02/chap07/tf_porte_f}\\
 \hline
 \end{tabular}
 \end{center}

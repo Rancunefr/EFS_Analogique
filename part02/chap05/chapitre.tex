@@ -1,0 +1,276 @@
+\chapter{Les signaux}
+
+\section{Définition}
+
+\begin{minipage}{0.8\textwidth}
+	\textbf{Signal, m} \textit{Phénomène physique dont la présence, l'absence ou les variations sont considérées comme représentant des informations.}\\
+
+	\textit{Le phénomène physique peut être, par exemple, une onde électromagnétique ou une onde acoustique, et les variations peuvent être, par exemple, celles d’un champ électrique, d’une tension électrique ou d’une pression acoustique.} \\ 
+
+	\hspace*{0pt}\hfill Définition de l'IEC (IEV 171-01-03)
+\end{minipage} \\
+
+\vspace{1cm}
+
+On appelle "\textbf{signal}" toute \textbf{grandeur définie en fonction du temps}. Il peut d'agir d'une tension $u(t)$, d'un courant $i(t)$, mais aussi de grandeurs plus diverses comme une température, une pression, etc. 
+
+\section{Propriétés des signaux}
+
+\subsection{Signaux continus et discrets}
+
+On distingue deux type de signaux : \\
+
+\begin{itemize}
+\item \textbf{Les signaux continus}, pour lesquels la grandeur est connue à chaque instant t. Mathématiquement, on les représente par des fonctions du temps. \\
+
+\begin{minipage}{0.4\textwidth}
+\begin{center}
+\includesvg[scale=0.5]{part02/chap05/signal_continu}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{equation*}
+	\begin{split}
+		u~: \, & \mathbb{R} \rightarrow  \mathbb{R}  \\	
+		& t \mapsto u(t) \\
+	\end{split}
+\end{equation*}
+\end{minipage} \\
+
+\item \textbf{Les signaux discrets}. Ce sont des signaux connus uniquement à certains instants $t_n$. Ils correspondent généralement à une mesure régulière d'une grandeur par exemple par un ADC. Mathématiquement, on repésente les signaux discrets par des suites. \\
+
+\begin{minipage}{0.4\textwidth}
+\begin{center}
+\includesvg[scale=0.5]{part02/chap05/signal_discret}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{equation*}
+	\begin{split}
+		u~: \, & \mathbb{N} \rightarrow  \mathbb{R}  \\	
+		& n \mapsto u_n \\
+	\end{split}
+\end{equation*}
+\end{minipage} \\
+
+Si on mesure, par exemple, le cours d'une action en bourse toutes les deux heures, on obtient un signal discret. \\
+
+\end{itemize}
+
+Les signaux continus servent en electronique analogique, domaine dans lequel il est toujours possible de mesurer une grandeur à tout instant. Lorsque l'on travaille avec un processeur ou un microcontroleur, il n'est pas possible de manipuler de tels signaux. On passe alors à une représentation par des signaux discrets dont les valeurs sont stockées dans un tableau en mémoire. 
+
+\subsection{Support temporel}
+
+On parle de \textbf{support temporel} d'un signal pour désigner l'ensemble des temps $t$ pour lesquels le signal est défini et non nul. \\
+
+Dans le cas continu, si le support temporel possède des limites inférieures et supérieures ( on parle de limite "haute" et "basse", on dit que le support temporel du signal est \textbf{borné}. \\
+
+Dans le cas discret, si le support temporel du signal comporte un nombre fini de valeurs, on dit que le support du signal est \textbf{fini}. Dans le cas contraire, on dit que le support est \textbf{infini}.\footnote{En pratique, les signaux que nous allons utiliser sont toujours à support fini ou borné. En effet, supposer le contraire reviendrait à affirmer que nous avons observé un nombre infini de mesures !}
+
+\subsection{Périodicité}
+
+Un signal est dit périodique si les variations de son amplitude se reproduisent régulièrement au bout d'un temps $T$ constant : \\
+
+
+\begin{center}
+\includesvg[scale=0.7]{part02/chap05/signal_periodique}
+\end{center}
+
+Un signal périodique a nécessairement un support temporel infini. \\
+
+\begin{minipage}[t]{0.4\textwidth}
+\textbf{Dans le cas continu} on dit qu'un signal $u$ est périodique s'il existe un réel $T$ non nul tel que :
+
+\begin{equation}
+\forall t \in \mathbb{R}, \quad u(t+T) = u(t)
+\end{equation}
+
+$T$ s'appelle la \textbf{période du signal}. C'est une grandeur temporelle exprimée en secondes. \\
+\end{minipage}
+\hfill \vline \hfill
+\begin{minipage}[t]{0.4\textwidth}
+\textbf{Dans le cas discret}, on dit qu'un signal $u$ est périodique s'il existe un entier non nul $M$ tel que :
+
+\begin{equation}
+	\forall n \in \mathbb{Z}, \quad u_{n+M} = u_{n}
+\end{equation}
+
+	L'entier $M$ est également appelé \textbf{période du signal}. La période dans le cas discret est adimensionnelle.
+\end{minipage} \\
+
+Les plus matheux d'entre vous auront remarqué que si un signal est de période $T$, alors il est aussi de période $2T$, $3T$, $4T$, etc : \\
+
+
+\includesvg[scale=0.5]{part02/chap05/signal_periodique_1} \\
+
+\includesvg[scale=0.5]{part02/chap05/signal_periodique_2} \\
+
+\includesvg[scale=0.5]{part02/chap05/signal_periodique_3} \\
+
+On définit donc la plus petite période strictement positive du signal comme étant la "\textbf{période fondamentale}". Si rien n'est précisé, vous pouvez généralement faire l'hypothèse dans la suite de ce document que c'est de cette période dont il est question. \\
+
+On définit également \textbf{la fréquence} du signal comme étant le nombre de répétitions de la séquence par seconde. Elle est notée $\nu$ (parfois aussi $f$ ou $F$ ... ) et son unité est le Hertz, de symbole Hz. Période et fréquence sont reliées par la relation suivante~:
+
+\begin{equation}
+	\nu = \dfrac{1}{T}
+\end{equation}
+
+\subsection{Puissance instantanée}
+
+La puissance instantanée d'un signal $u$ est définie comme la norme au carré du signal. \\
+
+\begin{minipage}[t]{0.4\textwidth}
+\textbf{Dans le cas continu :} \\
+\begin{equation}
+p_u(t) = u(t)\,\overline{u}(t) = | u(t) | ^2
+\end{equation}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.4\textwidth}
+\textbf{Dans le cas discret :} \\
+\begin{equation}
+p_u(n) = u_n\,\overline{u}_n = | u_n | ^2
+\end{equation}
+\end{minipage} \\
+
+\vspace{0.5cm}
+
+avec $\overline{u}$ le conjugué de $u$. 
+
+\subsection{Energie totale}
+
+L'énergie totale $E_u$ d'un signal correspond à la somme de la puissance instantanée du signal sur $\mathbb{R}$ pour les signaux continus et sur $\mathbb{Z}$ pour les signaux discrets. \\
+
+\begin{minipage}[t]{0.4\textwidth}
+\textbf{Dans le cas continu :} \\
+\begin{equation}
+E_u = \int_{-\infty}^{+\infty} | u(t) |^2\,\mathrm{d}t
+\end{equation}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.4\textwidth}
+\textbf{Dans le cas discret :} \\
+\begin{equation}
+	E_u = \sum_{n=-\infty}^{n=+\infty} |u_n|^2
+\end{equation}
+\end{minipage} \\
+
+\vspace{0.5cm}
+
+L'énergie totale d'un signal est exprimée en Joules (J).
+
+\subsection{Puissance moyenne}
+
+La puissance moyenne $P_u$ d'un signal $u$ correspond à la valeur moyenne de la puissance instantanée sur $\mathbb{R}$ pour les signaux continus et sur $\mathbb{Z}$ pour les signaux discrets. \\
+
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{Dans le cas continu :} \\
+\begin{equation}
+	P_u = \lim_{\tau \rightarrow \infty} \left( \dfrac{1}{2\tau} \int_{-\tau}^{+\tau} | u(t) |^2\,\mathrm{d}t \right)
+\end{equation}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{Dans le cas discret :} \\
+\begin{equation}
+	P_u = \lim_{m \rightarrow \infty} \left( \dfrac{1}{2m+1}\sum_{n=-m}^{n=+m} |u_n|^2 \right)
+\end{equation}
+\end{minipage} \\
+
+\vspace{0.5cm}
+
+Si un signal est à support borné (ou fini), sa puissance moyenne est nulle. 
+
+\subsection{Remarques}
+
+\begin{itemize} 
+		
+	\item Si $E_u < +\infty$, on parle de \textbf{signal à énergie finie}. En pratique, c'est normalement le cas de tous les signaux physiquement réalisables. \textbf{Un signal à énergie finie est de puissance moyenne totale nulle.} \\
+
+	\item Si $P_u < + \infty$, on parle de \textbf{signal à puissance finie}. Ces signaux n'existent pas en pratique, mais ils sont très utiles pour construire des modèles étudiables dans le cadre du traitement de signal. \textbf{Un signal à puissance finie et de puissance moyenne non nulle ne peut pas être d'énergie finie.} \\
+
+	\item \textbf{Cas des signaux périodiques :} \\
+
+	Puisqu'un signal périodique se réplique une infinité de fois, il est obligatoirement d'énergie infinie. On peut en outre écrire sa puissance moyenne sous la forme~: \\
+
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{Dans le cas continu :} \\
+\begin{equation}
+	\forall t \in \mathbb{R}, \; P_u = \dfrac{1}{T} \int_{t_0}^{t_0+T} | u(t) |^2\,\mathrm{d}t
+\end{equation}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{Dans le cas discret :} \\
+\begin{equation}
+	\forall n_0 \in \mathbb{Z}, \; P_u = \dfrac{1}{M}\sum_{n=n_0}^{n_0+M-1} |u_n|^2 
+\end{equation}
+\end{minipage} \\
+
+Dans les cas courants, un signal périodique est donc à puissance finie. 
+\end{itemize}
+
+\section{Les signaux types}
+
+Nous sommes maintenant capables de caractériser les différents signaux : continu/discret, support temporel borné/non borné/fini/infini, périodique/apériodique, énergie finie/infinie, puissance finie/infinie, etc. \\ 
+
+Les deux cas les plus courants en pratique sont les suivants : \\
+\begin{itemize}
+\item \textbf{Les signaux périodiques :}
+\begin{itemize}
+\item Energie totale infinie 
+\item Puissance moyenne totale finie  \\
+\end{itemize}
+\item\textbf{Les signaux à support temporel borné :}
+\begin{itemize}
+\item Energie totale finie 
+\item Puissance moyenne totale nulle \\
+\end{itemize}
+\end{itemize}
+
+Dans cette partie nous allons présenter des signaux "classiques" qui nous seront utiles dans la suite. Tous ces signaux ne sont pas forcément réalisables dans le monde physique, mais ils permettent de modéliser et manipuler les signaux : ils nous seront donc nécessaires pour la suite.
+
+\subsection{Sinusoïde}
+
+\fbox{\begin{minipage}[c]{0.4\textwidth}
+\begin{center}
+$$ u(t) = A\,cos(\omega\,t + \phi ) $$
+\end{center}
+\begin{itemize}
+\item $A$ est l'amplitude \\
+\item $\omega$ est la pulsation \\
+\item $\phi$ est la phase à l'origine \\
+\end{itemize}
+\end{minipage}}
+\hfill
+\begin{minipage}[c]{0.5\textwidth}
+\vspace{0pt}
+\begin{center}
+\begin{gnuplot}[terminal=epslatex, terminaloptions={color dashed size 8cm,5cm}]
+set sample 1000
+set xzeroaxis linetype -1
+set xtics border nomirror
+set ytics border nomirror
+set border 3
+set xr [-0.09:1]
+set yr [-1.5:1.50]
+T = 0.3 
+f = 1/T
+pi = 3.14159
+w = 2*pi*f 
+A = 1
+phi = pi/3
+f(t) = A*cos(w*t+phi)
+plot f(x) w l lc 4 lw 6 t ''
+\end{gnuplot}\\
+$f=3Hz$, $A = 1$, $phi = \dfrac{\pi}{3}$
+\end{center}
+\end{minipage}
+
+\subsection{Le signal porte}
+\subsection{Dirac}
+\subsection{Peigne de dirac}
+\subsection{Sinus cardinal}
+\section{Les signaux sinusoïdaux}
+
+
